@@ -9,8 +9,8 @@ import image from "@astrojs/image";
 // https://astro.build/config
 export default defineConfig({
   integrations: [react(), tailwind(), sitemap(), robotsTxt(), image()],
-  base: "/",
-  site: "https://tcetmumbai.in/",
+  base: "/tcet-website",
+  site: "https://tcet-opensource.github.io",
   vite: {
     ssr: {
       noExternal: [/^swiper\/*/,/^react-fast-marquee\/*/,/^usehooks-ts\/*/,/^react-countup\/*/ ]
