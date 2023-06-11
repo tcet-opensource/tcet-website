@@ -1,0 +1,13 @@
+---
+import MobileView from "./MobileView";
+import DesktopView from "./DesktopView";
+---
+
+<!-- Programmes Section goes here -->
+<div class="hidden md:block">
+  <DesktopView client:idle />
+</div>
+<div class="block md:hidden">
+  <MobileView client:idle />
+</div>
+<!-- Programmes Section ends here -->
