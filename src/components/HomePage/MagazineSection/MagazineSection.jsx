@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y, FreeMode } from "swiper";
+import { Navigation, A11y, FreeMode } from "swiper";
 
 
 import "swiper/css";
@@ -68,7 +68,7 @@ const MagazineSection = () => {
             <div className="min-w-full">
             <a href={data.link} target="_blank"rel="noopener noreferrer">
                 <img
-                  src={`/MagazineSection/${data.magazineImg}`}
+                  src={`/HomePage/MagazineSection/${data.magazineImg}`}
                   alt={data.magazineName}
                   className="max-h-90 w-80 mx-auto object-contain"
                 />
