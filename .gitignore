@@ -21,5 +21,4 @@ pnpm-debug.log*
 .DS_Store
 
 # yarn dependencies
-.yarn/
 .yarn
