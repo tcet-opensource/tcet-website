@@ -4,10 +4,13 @@ import DesktopView from "./DesktopView/DesktopView";
 ---
 
 <!-- Programmes Section goes here -->
-<div class="hidden md:block">
-  <DesktopView client:idle />
-</div>
-<div class="block md:hidden">
-  <MobileView client:idle />
+<div class="w-[90%] mx-auto">
+  <p class="text-3xl font-extrabold font-mono mb-4">Programmes</p>
+  <div class="hidden md:block">
+    <DesktopView client:idle />
+  </div>
+  <div class="block md:hidden">
+    <MobileView client:idle />
+  </div>
 </div>
 <!-- Programmes Section ends here -->
