@@ -4,7 +4,7 @@ import {
   AccordionHeader,
   AccordionBody,
 } from "@material-tailwind/react";
-import { data } from "./data";
+import { data } from "../../data";
 
 function Icon({ id, open }) {
   return (
