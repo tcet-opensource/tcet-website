@@ -1,8 +1,69 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import CertifiedSection from "../components/Home-page/certified-by-section/CertifiedSection.tsx";
+import CertifiedSection2 from "../components/Home-page/certified-by-section/CertifiedSection2.tsx";
 ---
 
-<Layout title="Welcome to TCET Mumbai" description='Thakur College of Engineeringa and Technology' >
-	<main>
-	</main>
+<Layout
+  title="Welcome to TCET Mumbai"
+  description="Thakur College of Engineeringa and Technology"
+>
+  <main>
+    <div class=' h-full w-full flex  flex-wrap m-auto items-center justify-center '>
+		<div class="">
+      <CertifiedSection
+        text="Institute Accredited by National Assessment and Accreditation Council (NAAC), Bangalore"
+        img="/Home-page/certified-by-section/image 3.png"
+      />
+	</div>
+	<div>
+	  <CertifiedSection
+	  text="ISO 9001 2015 Certified"
+	  img="/Home-page/certified-by-section/image 4.png"/>
+	</div>
+	<div>
+	  <CertifiedSection
+	  text="Accredited Programmes by National Board of Accreditation, New Delhi"
+	  img="/Home-page/certified-by-section/image 5.png"/>
+	</div>
+	<div>
+	  <CertifiedSection
+	  text="Accredited Programmes by National Board of Accreditation, New Delhi"
+	  img="/Home-page/certified-by-section/image 6.png"/>
+	  </div>
+    </div>
+	<div class=" gap-6 flex flex-col flex-wrap m-auto justify-center items-center mt-6 sm:flex-row">
+		<div>
+	  <CertifiedSection2
+		text="NBA Accreditation Letters"
+		img="/Home-page/certified-by-section/Frame R.png"
+	  />
+	</div>
+		<div>
+	  <CertifiedSection2
+		text="Awarded A Grade by NAAC for 5 years"
+		img="/Home-page/certified-by-section/Frame G.png"
+	  />
+	</div>
+		<div>
+	  <CertifiedSection2
+		text="NIRF Data"
+		img="/Home-page/certified-by-section/Frame Y.png"
+	  />
+	</div>
+		<div>
+	  <CertifiedSection2
+		text="NAAC SSR"
+		img="/Home-page/certified-by-section/Frame R.png"
+	  />
+	</div>
+		<div>
+	  <CertifiedSection2
+		text="NBA Accreditation Letters"
+		img="/Home-page/certified-by-section/Frame G.png"
+	  />
+	</div>
+	
+	<div/>
+  </main>
 </Layout>
