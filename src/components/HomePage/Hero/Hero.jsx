@@ -1,4 +1,4 @@
-import React, {useRef } from 'react';
+import React, {useRef, useEffect } from 'react';
 import SwiperCore, { EffectCoverflow, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
@@ -42,9 +42,11 @@ const slide_img = [
 const App = () => {
 
     const iframeRef = useRef(null);
+    const insideReq = useRef(null);
 
     const handleDialogClose = () => {
       const iframe = iframeRef.current;
+
       iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
       iframe.src = '';
       favDialog.close();
@@ -57,6 +59,23 @@ const App = () => {
         
         favDialog.showModal()
     }
+
+    useEffect(() => {
+      const handleClickOutside = (event) => {
+        if (insideReq.current && !insideReq.current.contains(event.target)) {
+          handleDialogClose && handleDialogClose();
+        }
+      };
+      document.addEventListener('click', handleClickOutside, true);
+      return () => {
+        document.removeEventListener('click', handleClickOutside, true);
+      };
+    }, [ handleDialogClose ]);
+
+  
+    
+  
+  
 
     SwiperCore.use([Autoplay])
   return (
@@ -102,9 +121,9 @@ const App = () => {
         </Swiper>
       </div>
 
-        <dialog id="favDialog" className='w-[1000px] rounded-md bg-black bg-opacity-50'>
-          <div className="relative w-full md:w-full lg:w-full h-96">
-            <iframe id="videoId"  className='rounded-md'
+        <dialog id="favDialog" className='w-[1000px] rounded-md bg-transparent'>
+          <div ref={insideReq} className="relative w-full md:w-full lg:w-full h-96">
+            <iframe id="videoId"  className='rounded-md border-2 border-solid border-sky-500'
                       width="100%"
                       height="100%" 
                       src="https://www.youtube.com/embed/bZiC538_JU8" 
@@ -114,7 +133,7 @@ const App = () => {
                       ref={iframeRef}>        
             </iframe>
 
-            <button className='absolute px-4 py-2 bg-white rounded-3xl text-sm text-black' style={{ top: '10px', right: '10px', display: 'flex', flexDirection: 'row', alignItems: 'center' }} onClick={handleDialogClose}>
+            <button className='absolute px-2 py-1 bg-white rounded-3xl text-sm text-black' style={{ top: '10px', right: '10px', display: 'flex', flexDirection: 'row', alignItems: 'center' }} onClick={handleDialogClose}>
             <svg xmlns="http://www.w3.org/2000/svg" className="inline-block mr-2 w-8 h-8" style={{ color: 'white',borderRadius: '50%', marginRight: '5px' }} viewBox="0 0 24 24" id="back-arrow"><g data-name="Layer 2"><g data-name="arrow-back"><rect width="24" height="24" opacity="0" transform="rotate(90 12 12)"></rect><path d="M19 11H7.14l3.63-4.36a1 1 0 1 0-1.54-1.28l-5 6a1.19 1.19 0 0 0-.09.15c0 .05 0 .08-.07.13A1 1 0 0 0 4 12a1 1 0 0 0 .07.36c0 .05 0 .08.07.13a1.19 1.19 0 0 0 .09.15l5 6A1 1 0 0 0 10 19a1 1 0 0 0 .64-.23 1 1 0 0 0 .13-1.41L7.14 13H19a1 1 0 0 0 0-2z"></path></g></g></svg>
             <span>Back to Slides</span>
           </button> 
