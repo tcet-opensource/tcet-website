@@ -55,7 +55,7 @@ export default function Awards() {
 
                         <div className="absolute top-1/2 h-max w-2/3 ml-5 mt-5 flex flex-col space-y-2">
                             <span className="w-max bg-white font-semibold px-2 rounded-full">Student Achievements</span>
-                            <span className="text-white font-semibold text-base md:text-sm lg:text-base">{award.caption}</span>
+                            <span className="text-white font-semibold text-base lg:text-sm xl:text-base">{award.caption}</span>
                         </div>
                     </SwiperSlide>
                 ))
