@@ -9,31 +9,31 @@ SwiperCore.use([EffectCoverflow]);
 const slide_img = [
   {
     text:"Academic + Fun + Wellness = Life@TCET",
-    img: "/HomePage/slider-1.jpg"
+    img: "/HomePage/Hero/slider-1.jpg"
   },
   {
     text:"Academic + Fun + Wellness = Life@TCET",
-    img: "/HomePage/slider-2.jpg"
+    img: "/HomePage/Hero/slider-2.jpg"
   },
   {
     text:"Academic + Fun + Wellness = Life@TCET",
-    img: "/HomePage/slider-3.jpg"
+    img: "/HomePage/Hero/slider-3.jpg"
   },
   {
     text:"Academic + Fun + Wellness = Life@TCET",
-    img: "/HomePage/slider-4.jpg"
+    img: "/HomePage/Hero/slider-4.jpg"
   },
   {
     text:"Academic + Fun + Wellness = Life@TCET",
-    img: "/HomePage/slider-5.jpg"
+    img: "/HomePage/Hero/slider-5.jpg"
   },
   {
     text:"Academic + Fun + Wellness = Life@TCET",
-    img: "/HomePage/slider-6.jpg"
+    img: "/HomePage/Hero/slider-6.jpg"
   },
   {
     text:"Academic + Fun + Wellness = Life@TCET",
-    img: "/HomePage/slider-7.jpg"
+    img: "/HomePage/Hero/slider-7.jpg"
   }
 ];
 
