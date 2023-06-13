@@ -108,8 +108,8 @@ const App = () => {
                 <SwiperSlide key={i}>
                   <div className="relative w-full md:w-full lg:w-full h-96">
                     <img src={el.img} alt="" className="w-full h-full object-cover" />
-                    <div className="absolute bottom-7 left-4 w-full md:w-[500px] lg:w-[700px]">
-                      <h1 className="lg:text-6xl md:text-5xl text-4xl text-white bg-black bg-opacity-5 font-title" style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.7)' }}>
+                    <div className="absolute bottom-7 left-4 w-full sm:w-[400px] lg:w-[700px]">
+                      <h1 className="lg:text-6xl sm:text-5xl text-5xl text-white bg-black bg-opacity-5 font-title" style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.7)' }}>
                         {el.text}
                       </h1>
                     </div>
