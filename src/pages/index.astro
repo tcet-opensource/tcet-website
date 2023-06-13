@@ -1,13 +1,14 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import CertifiedSection from "../components/Home-page/certified-by-section/index.astro";
+import Layout from '../layouts/Layout.astro';
+import CertifiedSection from '../components/HomePage/certified-by-section/index.astro';
+import MagazineSection from '../components/HomePage/MagazineSection/index.astro';
+import About from '../components/HomePage/About/index.astro';
 ---
 
-<Layout
-	title="Welcome to TCET Mumbai"
-	description="Thakur College of Engineeringa and Technology"
->
+<Layout title="Welcome to TCET Mumbai" description='Thakur College of Engineering and Technology' >
 	<main>
 		<CertifiedSection/>
+		<About />
+		<MagazineSection />
 	</main>
 </Layout>
