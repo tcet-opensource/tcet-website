@@ -40,11 +40,11 @@ const AccordionComponent = () => {
           >
             <AccordionHeader
               onClick={() => handleOpen(programme?.id)}
-              className="bg-slate-100 border-solid border-2 border-slate-200 px-4 rounded-md my-2"
+              className="bg-slate-100 border-solid border-2 border-slate-200 px-4 rounded-xl my-2"
             >
               {programme?.programme_name}
             </AccordionHeader>
-            <AccordionBody className=" border-solid border-2 border-slate-200 px-4 py-1 rounded-md">
+            <AccordionBody className=" border-solid border-2 border-slate-200 px-4 py-1 rounded-xl">
               {programme?.courses?.map((course, index) => (
                 <>
                   <div className="py-2">
