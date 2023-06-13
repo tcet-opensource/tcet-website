@@ -58,8 +58,8 @@ export default function Counter() {
                         {
                             ({countUpRef}) => (
                                 <div className={`flex flex-col justify-center items-center h-24 ${items.borderStyle}`}>
-                                    <span ref={countUpRef} className="font-title font-semibold text-4xl sm:text-5xl"></span>
-                                    <span className="text-xs pt-1">{items.label}</span>
+                                    <span ref={countUpRef} className="font-title text-gray-900 font-semibold text-4xl sm:text-5xl"></span>
+                                    <span className="text-xs text-gray-900 pt-1">{items.label}</span>
                                 </div>
                             )
                         }

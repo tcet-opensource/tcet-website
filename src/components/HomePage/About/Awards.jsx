@@ -49,12 +49,12 @@ export default function Awards() {
                 awards.map(award => (
                     <SwiperSlide key={award.awardId} className="relative h-full w-full">
                         <img 
-                            src={`/Images/About/${award.awardImg}`} 
+                            src={`/HomePage/About/${award.awardImg}`} 
                             className="object-cover object-center h-full w-full"
                         />
 
                         <div className="absolute top-1/2 h-max w-2/3 ml-5 mt-5 flex flex-col space-y-2">
-                            <span className="w-max bg-white font-semibold px-2 rounded-full">Student Achievements</span>
+                            <span className="w-max bg-white text-gray-700 font-semibold px-2 rounded-full">Student Achievements</span>
                             <span className="text-white font-semibold text-base lg:text-sm xl:text-base">{award.caption}</span>
                         </div>
                     </SwiperSlide>

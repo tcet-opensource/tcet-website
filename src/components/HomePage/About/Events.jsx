@@ -50,13 +50,13 @@ export default function Events() {
                 events.map(Event => (
                     <SwiperSlide key={Event.eventId} className="relative h-full w-full flex justify-center items-center">
                         <img 
-                            src={`/Images/About/${Event.eventImg}`} alt="Events" 
+                            src={`/HomePage/About/${Event.eventImg}`} alt="Events" 
                             className="object-cover object-center w-full"
                         />
 
                         <div className="absolute top-0 -left-1 pl-5 h-full w-2/3 flex flex-col bg-gradient-to-r justify-center from-white from-80%">
-                            <span className="text-4xl font-semibold">{Event.eventTitle}</span>
-                            <span className="w-4/5 text-sm">Massa elementum mi sed magnis orci tristique turpis. Quam at vitae in scelerisque volutpat fringilla eget sollicitudin rhoncus. Dignissim sit odio felis tortor imperdiet eu velit. Bibendum bibendum vitae pellentesque ultricies porttitor.</span>
+                            <span className="text-4xl text-gray-900 font-semibold">{Event.eventTitle}</span>
+                            <span className="w-4/5 text-sm text-gray-500">Massa elementum mi sed magnis orci tristique turpis. Quam at vitae in scelerisque volutpat fringilla eget sollicitudin rhoncus. Dignissim sit odio felis tortor imperdiet eu velit. Bibendum bibendum vitae pellentesque ultricies porttitor.</span>
                         </div>
                     </SwiperSlide>
                 ))
