@@ -12,42 +12,42 @@ const MagazineSection = () => {
   const slideObj = [
     {
       magazineImg: "magazine1.png",
-      aboutMag : "Ornare urna vestibulum tincidunt tincidunt adipiscing",
+      magazineName : "Ornare urna vestibulum tincidunt tincidunt adipiscing",
       link: "https://github.com/tcet-opensource",
     },
     {
       magazineImg: "magazine2.png",
-      aboutMag : "Ornare urna vestibulum tincidunt tincidunt adipiscing",
+      magazineName : "Ornare urna vestibulum tincidunt tincidunt adipiscing",
       link : "https://github.com/tcet-opensource",
     }, 
     {
       magazineImg: "magazine3.png",
-      aboutMag : "Ornare urna vestibulum tincidunt tincidunt adipiscing",
+      magazineName : "Ornare urna vestibulum tincidunt tincidunt adipiscing",
       link : "https://github.com/tcet-opensource",
     },
     {
       magazineImg: "magazine2.png",
-      aboutMag : "Ornare urna vestibulum tincidunt tincidunt adipiscing",
+      magazineName : "Ornare urna vestibulum tincidunt tincidunt adipiscing",
       link : "https://github.com/tcet-opensource",
     },
     {
       magazineImg: "magazine1.png",
-      aboutMag : "Ornare urna vestibulum tincidunt tincidunt adipiscing",
+      magazineName : "Ornare urna vestibulum tincidunt tincidunt adipiscing",
       link : "https://github.com/tcet-opensource",
     },
     {
       magazineImg: "magazine2.png",
-      aboutMag : "Ornare urna vestibulum tincidunt tincidunt adipiscing",
+      magazineName : "Ornare urna vestibulum tincidunt tincidunt adipiscing",
       link : "https://github.com/tcet-opensource",
     },
     {
       magazineImg: "magazine3.png",
-      aboutMag : "Ornare urna vestibulum tincidunt tincidunt adipiscing",
+      magazineName : "Ornare urna vestibulum tincidunt tincidunt adipiscing",
       link : "https://github.com/tcet-opensource",
     },
     {
       magazineImg: "magazine1.png",
-      aboutMag : "Ornare urna vestibulum tincidunt tincidunt adipiscing",
+      magazineName : "Ornare urna vestibulum tincidunt tincidunt adipiscing",
       link : "https://github.com/tcet-opensource",
     },
   ];
@@ -66,10 +66,9 @@ const MagazineSection = () => {
                 />
               </a>
             </div>
-            <div className=" font-semibold text-lg">{data.magazineName}</div>
           </div>
           <div className="bg-white  p-3 rounded-lg mb-2">
-            <div className="text-md text-slate-600">{data.aboutMag}</div>
+            <div className="text-sm md:text-base lg:text-md text-slate-600">{data.magazineName}</div>
           </div>
         </div>
       </SwiperSlide>
@@ -97,10 +96,10 @@ const MagazineSection = () => {
             slidesPerView: 4,
           },
           1024: {
-            slidesPerView: 5,
+            slidesPerView: 4,
           },
           1280: {
-            slidesPerView: 4,
+            slidesPerView: 5,
           },
         }}
         navigation={{
