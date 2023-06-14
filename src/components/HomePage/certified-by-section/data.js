@@ -1,6 +1,6 @@
  export const CertifiedSectionData = [
   {
-    image: "../../../../public/HomePage/certified-by-section/image 1.svg",
+    image: "/HomePage/certified-by-section/image 1.svg",
     text: "Institute Accredited by National Assessment and Accreditation Council (NAAC), Bangalore",
   },
   {
