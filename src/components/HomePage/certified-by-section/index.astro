@@ -1,0 +1,32 @@
+---
+import CertifiedSection from "./CertifiedSection";
+import ScrollBar from "./ScrollBar";
+import { CertifiedSectionData, ScrollBarData } from "./data";
+---
+
+<div class="h-full w-full flex flex-wrap m-auto items-center justify-center mt-6">
+    {
+        CertifiedSectionData.map((ele, index) => (
+            <div class="lg:border-r-2 md:border-r-2 md:last:border-r-0 lg:last:border-r-0">
+                <CertifiedSection text={ele.text} img={ele.image} />
+            </div>
+        ))
+    }
+</div>
+<div
+    class="scrollHor gap-6 w-auto max-w-full py-4 px-4 lg:px-12 flex flex-row m-auto justify-between items-center mt-6 border-t-2 border-b-2 overflow-x-auto overflow-y-hidden"
+>
+    {
+        ScrollBarData.map((ele, index) => (
+            <div>
+                <ScrollBar text={ele.text} img={ele.image} />
+            </div>
+        ))
+    }
+</div>
+
+<style>
+    .scrollHor::-webkit-scrollbar {
+        display: none;
+    }
+</style>
