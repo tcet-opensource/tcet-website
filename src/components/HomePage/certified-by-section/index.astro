@@ -1,67 +1,28 @@
 ---
-import CertifiedSection from "../certified-by-section/CertifiedSection";
-import CertifiedSection2 from "../certified-by-section/CertifiedSection2";
+import CertifiedSection from "./CertifiedSection";
+import ScrollBar from "./ScrollBar";
+import { CertifiedSectionData, ScrollBarData } from "./data";
 ---
 
-<div class="h-full w-full flex flex-wrap m-auto items-center justify-center">
-    <div class="lg:border-r-2 md:border-r-2">
-        <CertifiedSection
-            text="Institute Accredited by National Assessment and Accreditation Council (NAAC), Bangalore"
-            img="/HomePage/certified-by-section/image 3.png"
-        />
-    </div>
-    <div class="lg:border-r-2 md:border-r-2">
-        <CertifiedSection
-            text="ISO 9001 2015 Certified"
-            img="/HomePage/certified-by-section/image 4.png"
-        />
-    </div>
-    <div class="lg:border-r-2 md:border-r-2">
-        <CertifiedSection
-            text="Accredited Programmes by National Board of Accreditation, New Delhi"
-            img="/HomePage/certified-by-section/image 5.png"
-        />
-    </div>
-    <div>
-        <CertifiedSection
-            text="Accredited Programmes by National Board of Accreditation, New Delhi"
-            img="/HomePage/certified-by-section/image 6.png"
-        />
-    </div>
+<div class="h-full w-full flex flex-wrap m-auto items-center justify-center mt-6">
+    {
+        CertifiedSectionData.map((ele, index) => (
+            <div class="lg:border-r-2 md:border-r-2 md:last:border-r-0 lg:last:border-r-0">
+                <CertifiedSection text={ele.text} img={ele.image} />
+            </div>
+        ))
+    }
 </div>
 <div
     class="scrollHor gap-6 w-auto max-w-full py-4 px-4 lg:px-12 flex flex-row m-auto justify-between items-center mt-6 border-t-2 border-b-2 overflow-x-auto overflow-y-hidden"
 >
-    <div>
-        <CertifiedSection2
-            text="NBA Accreditation Letters"
-            img="/HomePage/certified-by-section/Frame R.png"
-        />
-    </div>
-    <div>
-        <CertifiedSection2
-            text="Awarded A Grade by NAAC for 5 years"
-            img="/HomePage/certified-by-section/Frame G.png"
-        />
-    </div>
-    <div>
-        <CertifiedSection2
-            text="NIRF Data"
-            img="/HomePage/certified-by-section/Frame Y.png"
-        />
-    </div>
-    <div>
-        <CertifiedSection2
-            text="NAAC SSR"
-            img="/HomePage/certified-by-section/Frame R.png"
-        />
-    </div>
-    <div>
-        <CertifiedSection2
-            text="NBA Accreditation Letters"
-            img="/HomePage/certified-by-section/Frame G.png"
-        />
-    </div>
+    {
+        ScrollBarData.map((ele, index) => (
+            <div>
+                <ScrollBar text={ele.text} img={ele.image} />
+            </div>
+        ))
+    }
 </div>
 
 <style>
