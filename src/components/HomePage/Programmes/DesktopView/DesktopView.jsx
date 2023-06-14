@@ -5,7 +5,7 @@ import { data } from "../data";
 
 const DesktopView = () => {
   const [DesktopViewStates, setDesktopViewStates] = React.useState({
-    currentProgramme: data?.[0],
+    currentProgramme: data[0],
   });
 
   const handleDesktopViewStatesChange = ({ name, value }) => {
@@ -17,12 +17,12 @@ const DesktopView = () => {
       <div className="w-[25%]">
         <LeftPanel
           data={data}
-          currentProgramme={DesktopViewStates?.currentProgramme}
+          currentProgramme={DesktopViewStates.currentProgramme}
           handleDesktopViewStatesChange={handleDesktopViewStatesChange}
         />
       </div>
-      <div className="w-[75%]">
-        <RightPanel currentProgramme={DesktopViewStates?.currentProgramme} />
+      <div className="w-[75%] rounded-lg border overflow-hidden h-fit ">
+        <RightPanel currentProgramme={DesktopViewStates.currentProgramme} />
       </div>
     </div>
   );

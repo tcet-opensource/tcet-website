@@ -20,7 +20,7 @@ const LeftPanel = ({
               key={programme?.id}
               className={`${
                 programme === currentProgramme ? "bg-slate-100" : ""
-              }  border-2 border-slate-200 rounded-md p-3 cursor-pointer flex justify-between items-center `}
+              }  border border-slate-200 rounded-lg p-3 cursor-pointer flex justify-between items-center `}
             >
               <>{programme?.programme_name}</>
               <>

@@ -1,10 +1,10 @@
-import { Fragment, useState } from "react";
+import { Fragment, useState, useEffect } from "react";
 import {
   Accordion,
   AccordionHeader,
   AccordionBody,
 } from "@material-tailwind/react";
-import { data } from "../../data";
+// import { data } from "../../data";
 
 function Icon({ id, open }) {
   return (
@@ -23,18 +23,24 @@ function Icon({ id, open }) {
   );
 }
 
-const AccordionComponent = () => {
-  const [open, setOpen] = useState(1);
+const AccordionComponent = ({data}) => {
+  const [open, setOpen] = useState(data[0].id);
 
   const handleOpen = (value) => {
     setOpen(open === value ? 0 : value);
   };
+
+  // useEffect(() => {
+  //   console.log(data);
+  //   console.log(open);
+  // }, [open]);
 
   return (
     <Fragment>
       {data &&
         data?.map((programme) => (
           <Accordion
+            key={programme?.programme_name}
             open={open === programme?.id}
             icon={<Icon id={programme?.id} open={open} />}
           >
@@ -45,8 +51,8 @@ const AccordionComponent = () => {
               {programme?.programme_name}
             </AccordionHeader>
             <AccordionBody className=" border-solid border-2 border-slate-200 px-4 py-1 rounded-md">
-              {programme?.courses?.map((course, index) => (
-                <>
+              {programme?.courses.map((course, index) => (
+                <div key={course?.name}>
                   <div className="py-2">
                     <div className="py-1">
                       <a
@@ -62,8 +68,9 @@ const AccordionComponent = () => {
                   {programme?.courses?.length - 1 !== index ? (
                     <div className="border-b-2 border-slate-200"></div>
                   ) : null}
-                </>
+                </div>
               ))}
+              {/* <p>hello</p> */}
             </AccordionBody>
           </Accordion>
         ))}

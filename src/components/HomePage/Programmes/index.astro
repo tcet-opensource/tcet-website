@@ -1,16 +1,19 @@
 ---
-import MobileView from "./MobileView/MobileView";
+// import MobileView from "./MobileView/MobileView";
 import DesktopView from "./DesktopView/DesktopView";
+import AccordianComponent from "./MobileView/components/AccordionComponent";
+
+import {data} from "./data"
 ---
 
 <!-- Programmes Section goes here -->
 <div class="w-[90%] mx-auto">
   <p class="text-3xl font-extrabold font-mono mb-4">Programmes</p>
   <div class="hidden md:block">
-    <DesktopView client:idle />
+    <DesktopView client:load />
   </div>
   <div class="block md:hidden">
-    <MobileView client:idle />
+    <AccordianComponent data={data} client:only="react" />
   </div>
 </div>
 <!-- Programmes Section ends here -->
