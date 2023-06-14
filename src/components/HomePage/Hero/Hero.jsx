@@ -7,34 +7,14 @@ import "swiper/swiper.min.css";
 SwiperCore.use([EffectCoverflow]);
 
 const slide_img = [
-  {
-    text:"Academic + Fun + Wellness = Life@TCET",
-    img: "/HomePage/Hero/slider-1.jpg"
-  },
-  {
-    text:"Academic + Fun + Wellness = Life@TCET",
-    img: "/HomePage/Hero/slider-2.jpg"
-  },
-  {
-    text:"Academic + Fun + Wellness = Life@TCET",
-    img: "/HomePage/Hero/slider-3.jpg"
-  },
-  {
-    text:"Academic + Fun + Wellness = Life@TCET",
-    img: "/HomePage/Hero/slider-4.jpg"
-  },
-  {
-    text:"Academic + Fun + Wellness = Life@TCET",
-    img: "/HomePage/Hero/slider-5.jpg"
-  },
-  {
-    text:"Academic + Fun + Wellness = Life@TCET",
-    img: "/HomePage/Hero/slider-6.jpg"
-  },
-  {
-    text:"Academic + Fun + Wellness = Life@TCET",
-    img: "/HomePage/Hero/slider-7.jpg"
-  }
+
+      "/HomePage/Hero/slider-1.jpg",
+      "/HomePage/Hero/slider-2.jpg",
+      "/HomePage/Hero/slider-3.jpg",
+      "/HomePage/Hero/slider-4.jpg",
+      "/HomePage/Hero/slider-5.jpg",
+      "/HomePage/Hero/slider-6.jpg",
+      "/HomePage/Hero/slider-7.jpg"
 ];
 
 
@@ -79,6 +59,12 @@ const App = () => {
   return (
     <> 
       <div className="relative">
+
+      <div className="absolute bottom-7 left-4 w-full sm:w-[400px] lg:w-[700px] z-10">
+        <h1 className="lg:text-6xl sm:text-5xl text-5xl text-white font-title">
+        Academic + Fun + Wellness = Life@TCET
+        </h1>
+      </div>
         <div className="absolute top-4 left-4 lg:top-auto lg:left-auto lg:bottom-4 lg:right-4 z-10">
           <button className="px-4 py-2 bg-white rounded-3xl text-sm text-black" onClick={handleClick}>
           <svg width="24" height="24" viewBox="0 0 24 24" className="inline-block mr-2" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -106,14 +92,12 @@ const App = () => {
             {slide_img.map((el, i) => {
               return (
                 <SwiperSlide key={i}>
-                  <div className="relative w-full md:w-full lg:w-full h-96">
-                    <img src={el.img} alt="" className="w-full h-full object-cover" />
-                    <div className="absolute bottom-7 left-4 w-full sm:w-[400px] lg:w-[700px]">
-                      <h1 className="lg:text-6xl sm:text-5xl text-5xl text-white bg-black bg-opacity-5 font-title" style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.7)' }}>
-                        {el.text}
-                      </h1>
-                    </div>
-                  </div>
+                  
+                    <div className='relative w-full md:w-full lg:w-full h-96'>
+                    <img src={el} alt="" className="w-full h-full object-cover" />
+                    <div className='absolute top-0 left-0 w-full h-full' style={{background: 'linear-gradient(35.79deg, #000000 -9.58%, rgba(0, 0, 0, 0) 55.17%)'}}></div>
+                    </div>  
+                 
                 </SwiperSlide>
               );
             })}
