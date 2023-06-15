@@ -1,7 +1,5 @@
 ---
-import Counter from "./Counter.jsx"
-import Events from "./Events.jsx"
-import Awards from "./Awards.jsx"
+import AboutSwiper from "./AboutSwiper"
 ---
 
 <section id="about" class="grid grid-cols-1 sm:grid-cols-2 gap-16 justify-center border-t-2 pt-5 lg:pt-0">
@@ -17,19 +15,15 @@ import Awards from "./Awards.jsx"
         </a>
     </div>
     <div class="px-5 sm:px-0">
-        <img 
+        <!-- <img 
             src="HomePage/About/Thakur.png" 
             class="object-cover object-center w-full"
             alt="Thakur College of Engineering and Technology"
-        />
-        <p class="text-justify text-sm text-gray-900 px-2 pt-2">Augue ut viverra tempus leo sagittis magna egestas sed tellus. Nisl vitae est vulputate nunc. Nunc ultrices amet sodales ultrices magna lacus mauris.</p>
+        /> -->
+        <AboutSwiper client:load />
+        <p class="text-justify text-sm text-gray-900 px-2 pt-2">Education is the manifestation of perfection already existing in man.</p>
     </div>
 </section>
-<Counter client:only="react"/>
 
-<div class="hidden sm:grid sm:grid-cols-1 lg:grid-cols-8 gap-6 sm:my-7 py-7 mx-10">         <!--Making the swiper js disabled for the mobile version-->
-    <Events client:only="react"/>
-    <Awards client:only="react"/>
-</div>
 
 

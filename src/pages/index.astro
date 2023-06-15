@@ -5,6 +5,10 @@ import CertifiedSection from '../components/HomePage/certified-by-section/index.
 import MagazineSection from '../components/HomePage/MagazineSection/index.astro';
 import Hero from '../components/HomePage/Hero/index.astro';
 import About from '../components/HomePage/About/index.astro';
+import Counter from "../components/HomePage/Counter.jsx"
+import Events from "../components/HomePage/Events.jsx"
+import Awards from "../components/HomePage/Awards.jsx"
+
 ---
 
 <Layout title="Welcome to TCET Mumbai" description='Thakur College of Engineering and Technology' >
@@ -12,6 +16,12 @@ import About from '../components/HomePage/About/index.astro';
 		<Hero />
 		<CertifiedSection/>
 		<About />
+		<Counter client:only="react"/>
+
+		<div class="hidden sm:grid sm:grid-cols-1 lg:grid-cols-10 gap-6 sm:my-7 py-7 mx-10">         
+			<Events client:only="react"/>
+			<Awards client:only="react"/>
+		</div>
 		<Programmes/>
 		<MagazineSection />
 	</main>

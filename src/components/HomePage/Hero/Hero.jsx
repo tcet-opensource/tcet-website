@@ -37,7 +37,7 @@ const App = () => {
     const handleClick = () => {
       const iframe = iframeRef.current;
       
-        iframe.src="https://www.youtube.com/embed/bZiC538_JU8"
+        iframe.src="https://www.youtube.com/embed/EPEbkGYBw3s"
         
         favDialog.showModal()
         setDialogOpen(true)
@@ -112,7 +112,7 @@ const App = () => {
             <iframe id="videoId"  className='rounded-md border-2 border-solid border-gray-500 shadow-lg'
                       width="100%"
                       height="100%" 
-                      src="https://www.youtube.com/watch?v=EPEbkGYBw3s" 
+                      src="https://www.youtube.com/embed/EPEbkGYBw3s" 
                       title="YouTube video player" 
                       frameborder="0" 
                       allowfullscreen

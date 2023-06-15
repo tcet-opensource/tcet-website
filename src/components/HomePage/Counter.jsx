@@ -34,10 +34,10 @@ export default function Counter() {
         {
             "id": 4,
             "start": 0,
-            "end": 2000,
+            "end": 60,
             "prefix": "",
             "suffix": "+",
-            "label": "Student Placements in 2021",
+            "label": "Professors",
             "borderStyle": ""
         }
     ])
