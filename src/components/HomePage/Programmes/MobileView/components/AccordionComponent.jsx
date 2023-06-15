@@ -24,16 +24,11 @@ function Icon({ id, open }) {
 }
 
 const AccordionComponent = ({data}) => {
-  const [open, setOpen] = useState(data[0].id);
+  const [open, setOpen] = useState(1);
 
   const handleOpen = (value) => {
     setOpen(open === value ? 0 : value);
   };
-
-  // useEffect(() => {
-  //   console.log(data);
-  //   console.log(open);
-  // }, [open]);
 
   return (
     <Fragment>
@@ -46,11 +41,11 @@ const AccordionComponent = ({data}) => {
           >
             <AccordionHeader
               onClick={() => handleOpen(programme?.id)}
-              className="  border border-slate-200 px-4 font-normal rounded-md my-2"
+              className="border border-slate-200 px-4 font-normal rounded-md my-2 text-black bg-slate-100"
             >
               {programme?.programme_name}
             </AccordionHeader>
-            <AccordionBody className=" border border-slate-200 px-4 py-1 rounded-md">
+            <AccordionBody className=" border border-slate-200 px-4 py-1 rounded-md text-black">
               {programme?.courses.map((course, index) => (
                 <div key={course?.name}>
                   <div className="py-2">
