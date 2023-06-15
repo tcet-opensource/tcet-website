@@ -10,27 +10,33 @@ export default function Events() {
     const [events, setEvents] = useState([
         {
             "eventId": 1,
-            "eventImg": "Events.png",
-            "eventTitle": "Zephyr 2023",
-            "description": "Massa elementum mi sed magnis orci tristique turpis. Quam at vitae in scelerisque volutpat fringilla eget sollicitudin rhoncus. Dignissim sit odio felis tortor imperdiet eu velit. Bibendum bibendum vitae pellentesque ultricies porttitor."
+            "eventImg": "multicon.jpg",
+            "eventTitle": "Multicon 2023",
+            "description": `
+MULTICON-W is an initiative of Thakur College of
+Engineering and Technology (TCET). This platform is created with the objective of inculcating the Research
+culture in the Higher and Technical Educational Institutes, where UG and PG programs are evaluated by the
+accrediting bodies like NBA and NAAC in which research contribution is the major parameter to evaluate the
+R&D activities
+            `
         },
         {
             "eventId": 2,
-            "eventImg": "Events.png",
+            "eventImg": "zephyr.jpg",
             "eventTitle": "Zephyr 2023",
-            "description": "Massa elementum mi sed magnis orci tristique turpis. Quam at vitae in scelerisque volutpat fringilla eget sollicitudin rhoncus. Dignissim sit odio felis tortor imperdiet eu velit. Bibendum bibendum vitae pellentesque ultricies porttitor."
+            "description": "Technical Festival was organized to enhance the technical skills as well as managerial skill which will enhance the overall skill of the student through various platforms with the keen vision that further it would help in the augmentation of name, fame, and growth of the institute."
         },
         {
             "eventId": 3,
-            "eventImg": "Events.png",
-            "eventTitle": "Zephyr 2023",
-            "description": "Massa elementum mi sed magnis orci tristique turpis. Quam at vitae in scelerisque volutpat fringilla eget sollicitudin rhoncus. Dignissim sit odio felis tortor imperdiet eu velit. Bibendum bibendum vitae pellentesque ultricies porttitor."
+            "eventImg": "sojourn.jpg",
+            "eventTitle": "Sojourn 2023",
+            "description": "The annual cultural festival Sojourn is one of the most awaited events at the college campus. Sojourn is a thoroughfare along which the engineering students are able to unveil their talent on the much isolated turf of performing arts. This is an event where students take a brief time off their busy schedule and strive hard to acclaim proficiency in the field of performing arts."
         },
     ])
 
     return (
         <Swiper
-            className="lg:col-span-5 relative h-auto sm:h-72 md:h-80 lg:h-72 w-full rounded-lg"
+            className="lg:col-span-6 relative h-auto sm:h-72 md:h-80 lg:h-72 w-full rounded-lg"
             slidesPerView={1}
             centeredSlides={true}
             spaceBetween={30}
@@ -50,13 +56,13 @@ export default function Events() {
                 events.map(Event => (
                     <SwiperSlide key={Event.eventId} className="relative h-full w-full flex justify-center items-center">
                         <img 
-                            src={`/HomePage/About/${Event.eventImg}`} alt="Events" 
+                            src={`/HomePage/Events/${Event.eventImg}`} alt="Events" 
                             className="object-cover object-center w-full"
                         />
 
-                        <div className="absolute top-0 -left-1 pl-5 h-full w-2/3 flex flex-col bg-gradient-to-r justify-center from-white from-80%">
+                        <div className="absolute top-0 -left-1 pl-5 h-full w-2/3 flex flex-col bg-gradient-to-r justify-center from-[#ffffffE6] from-80%">
                             <span className="text-4xl text-gray-900 font-semibold">{Event.eventTitle}</span>
-                            <span className="w-4/5 text-sm text-gray-500">Massa elementum mi sed magnis orci tristique turpis. Quam at vitae in scelerisque volutpat fringilla eget sollicitudin rhoncus. Dignissim sit odio felis tortor imperdiet eu velit. Bibendum bibendum vitae pellentesque ultricies porttitor.</span>
+                            <span className="w-4/5 text-sm text-gray-700">{Event.description}</span>
                         </div>
                     </SwiperSlide>
                 ))
