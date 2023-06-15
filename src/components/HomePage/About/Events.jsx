@@ -11,7 +11,7 @@ export default function Events() {
         {
             "eventId": 1,
             "eventImg": "Events.png",
-            "eventTitle": "Zephyr 2023",
+            "eventTitle": "Multicon 2023",
             "description": "Massa elementum mi sed magnis orci tristique turpis. Quam at vitae in scelerisque volutpat fringilla eget sollicitudin rhoncus. Dignissim sit odio felis tortor imperdiet eu velit. Bibendum bibendum vitae pellentesque ultricies porttitor."
         },
         {

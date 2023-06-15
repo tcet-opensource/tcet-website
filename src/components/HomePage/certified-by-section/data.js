@@ -21,22 +21,27 @@ export const ScrollBarData = [
   {
     image: "Frame R.svg",
     text: "NBA Accreditation Letters",
+    href: "https://tcetmumbai.in/Notice/Accreditation%20Letters%20from%20NBA.pdf"
   },
   {
     image: "Frame G.svg",
     text: "Awarded A Grade by NAAC for 5 years",
+    href: "https://tcetmumbai.in/Notice/NAAC%202017.pdf"
   },
   {
     image: "Frame Y.svg",
     text: "NIRF Data",
+    href: "https://tcetmumbai.in/NIRF_Data.html"
   },
   {
     image: "Frame R.svg",
     text: "NAAC SSR",
+    href: "https://tcetmumbai.in/Notice/TCET_NAAC_2017.pdf"
   },
   {
     image: "Frame G.svg",
-    text: "NBA Accreditation Letters",
+    text: "IIC 4 STAR RATING",
+    href: "https://tcetmumbai.in/IIC%204%20Star%20Rating.pdf"
   },
 ];
 

@@ -61,7 +61,7 @@ const App = () => {
       <div className="relative">
 
       <div className="absolute bottom-7 left-4 w-full sm:w-[400px] lg:w-[700px] z-10">
-        <h1 className="lg:text-6xl sm:text-5xl text-5xl text-white font-title">
+        <h1 className="lg:text-6xl text-2xl sm:text-3xl w-3/5 sm:w-3/4 lg:w-full text-white font-title">
         Academic + Fun + Wellness = Life@TCET
         </h1>
       </div>
@@ -93,7 +93,7 @@ const App = () => {
               return (
                 <SwiperSlide key={i}>
                   
-                    <div className='relative w-full md:w-full lg:w-full h-96'>
+                    <div className='relative w-full md:w-full lg:w-full h-[20vh] lg:h-[75vh]'>
                     <img src={el} alt="" className="w-full h-full object-cover" />
                     <div className='absolute top-0 left-0 w-full h-full' style={{background: 'linear-gradient(35.79deg, #000000 -9.58%, rgba(0, 0, 0, 0) 55.17%)'}}></div>
                     </div>  
@@ -112,7 +112,7 @@ const App = () => {
             <iframe id="videoId"  className='rounded-md border-2 border-solid border-gray-500 shadow-lg'
                       width="100%"
                       height="100%" 
-                      src="https://www.youtube.com/embed/bZiC538_JU8" 
+                      src="https://www.youtube.com/watch?v=EPEbkGYBw3s" 
                       title="YouTube video player" 
                       frameborder="0" 
                       allowfullscreen

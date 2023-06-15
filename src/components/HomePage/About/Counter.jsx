@@ -7,28 +7,28 @@ export default function Counter() {
         {
             "id": 1,
             "start": 0,
-            "end": 2000,
+            "end": 4500,
             "prefix": "",
             "suffix": "+",
-            "label": "Student Placements in 2021",
+            "label": "Student Admitted in 2022-23",
             "borderStyle": "border-b-2 lg:border-b-0 sm:border-r-2"
         },
         {
             "id": 2,
             "start": 0,
-            "end": 8,
+            "end": 95,
             "prefix": "",
-            "suffix": "K+",
-            "label": "Student Placements in 2021",
+            "suffix": "%+",
+            "label": "Student Placed in 2021-22",
             "borderStyle": "border-b-2 lg:border-b-0 lg:border-r-2"
         },
         {
             "id": 3,
             "start": 0,
-            "end": 453,
+            "end": 40,
             "prefix": "",
             "suffix": "+",
-            "label": "Student Placements in 2021",
+            "label": "Papers Published in 2022",
             "borderStyle": "border-b-2 sm:border-b-0 sm:border-r-2"
         },
         {
