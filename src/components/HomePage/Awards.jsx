@@ -8,33 +8,24 @@ export default function Awards() {
     const [awards, setAwards] = useState([
         {
             awardId: 1,
-            awardImg: "Awards.jpg",
-            caption: `Massa elementum mi sed magnis orci tristique turpis. Quam at vitae
-                in scelerisque volutpat fringilla eget sollicitudin rhoncus.`,
+            awardImg: "about-slider-4.jpg",
+            caption: `Falicitation of Riya Vishwakarma for being placed in Amazon with 40.00CTC package.`,
         },
         {
             awardId: 2,
-            awardImg: "Awards.jpg",
-            caption: `Massa elementum mi sed magnis orci tristique turpis. Quam at vitae
-                in scelerisque volutpat fringilla eget sollicitudin rhoncus.`,
+            awardImg: "about-slider-2.jpg",
+            caption: `Our proud students taking part in science exhibition.`,
         },
         {
             awardId: 3,
-            awardImg: "Awards.jpg",
-            caption: `Massa elementum mi sed magnis orci tristique turpis. Quam at vitae
-                in scelerisque volutpat fringilla eget sollicitudin rhoncus.`,
-        },
-        {
-            awardId: 4,
-            awardImg: "Awards.jpg",
-            caption: `Massa elementum mi sed magnis orci tristique turpis. Quam at vitae
-                in scelerisque volutpat fringilla eget sollicitudin rhoncus.`,
+            awardImg: "about-slider-3.jpg",
+            caption: `Congratulating all our students placed with high packages.`,
         },
     ])
 
     return (
         <Swiper
-            className="lg:col-span-3 relative h-auto sm:h-72 md:h-80 lg:h-72 w-full rounded-lg"
+            className="lg:col-span-4 relative h-auto sm:h-72 md:h-80 lg:h-72 w-full rounded-lg"
             slidesPerView={1}
             spaceBetween={30}
             centeredSlides={true}
@@ -49,7 +40,7 @@ export default function Awards() {
                 awards.map(award => (
                     <SwiperSlide key={award.awardId} className="relative h-full w-full">
                         <img 
-                            src={`/HomePage/About/${award.awardImg}`} 
+                            src={`/HomePage/Awards/${award.awardImg}`} 
                             className="object-cover object-center h-full w-full"
                         />
 

@@ -59,7 +59,7 @@ const MobileNav: React.FC<{
       {navOpen && (
         <aside
           ref={ref}
-          className="animate-fadeIn absolute top-[10%] z-10 right-[100%] py-6 px-4  bg-white w-56 rounded-xl border max-w-sm"
+          className="animate-fadeIn absolute top-[10%] z-50 right-[100%] py-6 px-4  bg-white w-56 rounded-xl border max-w-sm"
         >
           <nav className="flex flex-col gap-4 xl:gap-6 2xl:gap-8">
             <a className="flex items-center " href="https://thakureducation.org">

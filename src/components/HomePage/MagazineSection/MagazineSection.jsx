@@ -11,44 +11,29 @@ import "swiper/css/free-mode";
 const MagazineSection = () => {
   const slideObj = [
     {
+      magazineImg: "QUASAR-23.jpg",
+      magazineName : "Quasar | College Magazine",
+      link : "https://online.pubhtml5.com/wrkl/fsai/#p=1",
+    },
+    {
       magazineImg: "magazine1.png",
-      magazineName : "Ornare urna vestibulum tincidunt tincidunt adipiscing",
-      link: "https://github.com/tcet-opensource",
+      magazineName : "Elysian | SORT & Literary Club",
+      link: "https://online.pubhtml5.com/pohdz/htxu/#p=1",
     },
     {
       magazineImg: "magazine2.png",
-      magazineName : "Ornare urna vestibulum tincidunt tincidunt adipiscing",
-      link : "https://github.com/tcet-opensource",
+      magazineName : "Tejas | AIML Department",
+      link : "https://online.pubhtml5.com/rylr/udki/#p=1  ",
     }, 
     {
       magazineImg: "magazine3.png",
-      magazineName : "Ornare urna vestibulum tincidunt tincidunt adipiscing",
-      link : "https://github.com/tcet-opensource",
+      magazineName : "Guftagu | TSDW",
+      link : "https://online.pubhtml5.com/utkaf/hnic/#p=1",
     },
     {
-      magazineImg: "magazine2.png",
-      magazineName : "Ornare urna vestibulum tincidunt tincidunt adipiscing",
-      link : "https://github.com/tcet-opensource",
-    },
-    {
-      magazineImg: "magazine1.png",
-      magazineName : "Ornare urna vestibulum tincidunt tincidunt adipiscing",
-      link : "https://github.com/tcet-opensource",
-    },
-    {
-      magazineImg: "magazine2.png",
-      magazineName : "Ornare urna vestibulum tincidunt tincidunt adipiscing",
-      link : "https://github.com/tcet-opensource",
-    },
-    {
-      magazineImg: "magazine3.png",
-      magazineName : "Ornare urna vestibulum tincidunt tincidunt adipiscing",
-      link : "https://github.com/tcet-opensource",
-    },
-    {
-      magazineImg: "magazine1.png",
-      magazineName : "Ornare urna vestibulum tincidunt tincidunt adipiscing",
-      link : "https://github.com/tcet-opensource",
+      magazineImg: "magazine4.png",
+      magazineName : "Emaarat | Civil Department",
+      link : "https://online.pubhtml5.com/csfxq/blon/#p=1",
     },
   ];
 
