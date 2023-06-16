@@ -16,22 +16,22 @@ const MagazineSection = () => {
       link : "https://online.pubhtml5.com/wrkl/fsai/#p=1",
     },
     {
-      magazineImg: "magazine1.png",
+      magazineImg: "elysian.jpg",
       magazineName : "Elysian | SORT & Literary Club",
       link: "https://online.pubhtml5.com/pohdz/htxu/#p=1",
     },
     {
-      magazineImg: "magazine2.png",
+      magazineImg: "tejas.jpg",
       magazineName : "Tejas | AIML Department",
       link : "https://online.pubhtml5.com/rylr/udki/#p=1  ",
     }, 
     {
-      magazineImg: "magazine3.png",
+      magazineImg: "TSDW-Guftagu.png",
       magazineName : "Guftagu | TSDW",
       link : "https://online.pubhtml5.com/utkaf/hnic/#p=1",
     },
     {
-      magazineImg: "magazine4.png",
+      magazineImg: "emaarat.jpg",
       magazineName : "Emaarat | Civil Department",
       link : "https://online.pubhtml5.com/csfxq/blon/#p=1",
     },
@@ -40,14 +40,14 @@ const MagazineSection = () => {
   const mappedSlides = slideObj.map((data) => {
     return (
       <SwiperSlide key={data.magazineName} className="border rounded-lg">
-        <div className="box-content w-272 h-432 p-8 flex flex-col justify-between">
+        <div className="box-content p-8 flex flex-col justify-between">
           <div className="space-y-2">
             <div className="min-w-full">
             <a href={data.link} target="_blank"rel="noopener noreferrer">
                 <img
                   src={`/HomePage/MagazineSection/${data.magazineImg}`}
                   alt={data.magazineName}
-                  className="max-h-90 w-80 mx-auto object-contain"
+                  className=" w-80 aspect-[3/5] mx-auto object-contain "
                 />
               </a>
             </div>
