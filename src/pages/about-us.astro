@@ -1,0 +1,78 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Sidebar from "../components/About/Sidebar.astro";
+
+const primaryLinks = [
+    {
+        title: "About TCET",   
+        link: "/about/index",  
+    },
+    {
+        title: "Recognition & Awards",    
+        link: "/about/recognition-awards", 
+    },
+    {
+        title: "Chariman's Message",   
+        link: "/about/charimans-message", 
+    },
+    {
+        title: "CEO's Message",   
+        link: "/about/CEOs-message", 
+    },
+    {
+        title: "Principle's Message",    
+        link: "/about/principle-message", 
+    },
+    {
+        title: "Dean RnD Message",   
+        link: "/about/dean-RnD-message", 
+    },
+    {
+        title: "Dean SSW Message",   
+        link: "/about/dean-SSW-message",  
+    },
+    {
+        title: "Institutional Growth",    
+        link: "/about/institutional-growth", 
+    },
+    {
+        title: "Testimonials",   
+        link: "/about/testimonials", 
+    },
+    {
+        title: "Documentation",   
+        link: "/about/documentation",  
+    },
+    {
+        title: "Educational Survey",  
+        link: "/about/documentation#educational-survey", 
+    },
+    {
+        title: "Institutional Activities",   
+        link: "/about/documentation#institutional-activities", 
+    },
+    {
+        title: "NIRF Data",   
+        link: "/about/documentation#NIRF-data",  
+    },
+    {
+        title: "Mandatory Disclosure",    
+        link: "/about/documentation/mandotory-disclosure.pdf", 
+    },
+    {
+        title: "Perspective Plan",   
+        link: "/about/documentation/perspective-plan.pdf", 
+    },
+]
+---
+
+<Layout 
+    title="TCET - Training and Placement cell" 
+    description="The Official Website of Training and Placement Cell of Thakur College of Engineering and Technology"
+>
+    <main class="relative h-screen md:h-auto" >
+        <Sidebar 
+            primaryLinks={primaryLinks} 
+        />
+    </main>
+</Layout>
