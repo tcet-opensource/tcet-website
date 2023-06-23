@@ -1,6 +1,6 @@
 ---
 import { SEO } from "astro-seo";
-
+import Recognition from "../components/About/RecognitionAward/index.astro"
 export interface Props {
   title: string;
   description: string;
@@ -57,8 +57,9 @@ import "../styles.css";
 	</head>
 	<body>
 		<Header />
+    <Recognition />
 
-		<slot />
+		<!-- <slot /> -->
 		<Footer />
 	</body>
 </html>
