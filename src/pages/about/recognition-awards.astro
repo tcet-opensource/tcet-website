@@ -1,7 +1,8 @@
 ---
-import Sidebar from "../../components/About/Sidebar/index.astro"
+import Sidebar from "../../components/Sidebar/index.astro"
+console.log(Astro.url.pathname);
 const primaryLinks = [
-    { title: "About TCET",                  link: "/about/index",  },
+    { title: "About TCET",                  link: "/about",  },
     { title: "Recognition & Awards",        link: "/about/recognition-awards", },
     { title: "Chariman's Message",          link: "/about/charimans-message", },
     { title: "CEO's Message",               link: "/about/CEOs-message", },
@@ -19,7 +20,7 @@ const primaryLinks = [
 ]
 ---
 
-<section class="flex flex-row space-x-20 mt-20 h-screen items-start">
+<section class="relative">
     <Sidebar 
         primaryLinks={primaryLinks}
     />

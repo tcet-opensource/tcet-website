@@ -1,9 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Sidebar from "../components/About/Sidebar/index.astro";
+import Sidebar from "../components/Sidebar/index.astro";
 
 const primaryLinks = [
-    { title: "About TCET",                  link: "/about/index",  },
+    { title: "About TCET",                  link: "/about",  },
     { title: "Recognition & Awards",        link: "/about/recognition-awards", },
     { title: "Chariman's Message",          link: "/about/charimans-message", },
     { title: "CEO's Message",               link: "/about/CEOs-message", },
@@ -25,9 +25,11 @@ const primaryLinks = [
     title="TCET - Training and Placement cell" 
     description="The Official Website of Training and Placement Cell of Thakur College of Engineering and Technology"
 >
-    <main class="relative h-screen md:h-auto" >
+    <main class="relative h-[200vh] md:h-auto" >
         <Sidebar 
             primaryLinks={primaryLinks} 
         />
+
+        
     </main>
 </Layout>
