@@ -1,10 +1,12 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import Testimonials from '../../components/About/Testimonials/index.astro';
+import Testimonials from '../../components/About/Testimonials/Testimonials.jsx';
 ---
 
 <Layout title="Welcome to TCET Mumbai" description='Thakur College of Engineering and Technology' >
   <main class = "p-4 lg:p-16">
-   <Testimonials/>
+    <div class="text-xl font-title sm:text-3xl md:text-4xl flex flex-col px-6 py-2">Testimonials</div>
+    <Testimonials client:load/>
   </main>
 </Layout>
+
