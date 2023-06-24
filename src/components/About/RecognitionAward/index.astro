@@ -64,7 +64,7 @@ const survey_pts = [
 ];
 ---
 
-<section class="px-5">
+<section class="p-4 lg:p-16">
     <h1 class="font-title text-4xl pb-4">Recognition & Awards</h1>
     <div
         class="text-right text-base border-r-4 border-[#667085] p-4 -ml-2"
@@ -89,7 +89,7 @@ const survey_pts = [
     </p>
 
     <div
-        class="h-full w-full flex flex-wrap m-auto items-center justify-center mt-6 pb-4"
+        class="w-full h-full flex flex-wrap lg:flex-nowrap m-auto items-center justify-center mt-6 pb-4 lg:pb-10"
     >
         {
             CertifiedSectionData.map((ele, index) => (
@@ -100,7 +100,7 @@ const survey_pts = [
         }
     </div>
 
-    <div>
+    <div class="pb-4 lg:pb-10">
         <h1 class="text-2xl font-semibold pb-2 text-[#101828]">
             Quality in Education leads to
         </h1>
@@ -125,7 +125,7 @@ const survey_pts = [
             }
         </div>
     </div>
-    <div class="pb-4">
+    <div class="pb-4 lg:pb-10">
         <h1 class="text-2xl font-semibold pb-2 text-[#101828]">Quality Policy</h1>
         <ul class="list-disc pl-5 text-[#667085] text-base">
             {
@@ -135,7 +135,7 @@ const survey_pts = [
             }
         </ul>
     </div>
-    <div class="pb-4">
+    <div class="pb-4 lg:pb-10">
         <h1 class="text-2xl font-semibold pb-2 text-[#101828]">
             TCET Achievements:A Mark of Quality Education
         </h1>
@@ -147,7 +147,7 @@ const survey_pts = [
             }
         </ul>
     </div>
-    <div class="pb-4">
+    <div class="pb-4 lg:pb-10">
         <h1 class="text-2xl font-semibold pb-2 text-[#101828]">AICTE CII Survey</h1>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             {
@@ -155,11 +155,11 @@ const survey_pts = [
                     return (
                         <div class="flex flex-cols p-4 border rounded-xl">
                             <img
-                                class="pr-4 -mt-5"
+                                class="absolute pr-4 "
                                 src="/About/RecognitionAwards/Frame.svg"
                                 alt=""
                             />
-                            <div class="text-base">
+                            <div class="text-base pl-12">
                                 <p class="w-fit bg-[#F2F4F7] p-1 px-2 rounded-2xl text-base">
                                     {el.year}
                                 </p>

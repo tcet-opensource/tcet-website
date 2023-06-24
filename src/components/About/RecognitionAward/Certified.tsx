@@ -16,3 +16,4 @@ interface CertiProps {
   }
   
   export default certifiedSection
+
