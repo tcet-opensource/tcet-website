@@ -1,6 +1,6 @@
 ---
 const allImages = await Astro.glob('../../../../public/LifeAtTCET/Home/SecondCards/*.png');
 ---
-<div class="cards">
-    {allImages.map((img) => <img class="images" src={img.default.src} alt=""/>)}
+<div class="flex flex-wrap gap-[15px] sm:justify-center">
+    {allImages.map((img) => <img class="float-left border shadow-[0px_8px_8px_-4px_#1018280A] shadow-[0px_20px_24px_-4px_#1018281A] p-3 rounded-[5px] border-solid border-[#E2E2E2]" src={img.default.src} alt=""/>)}
 </div>

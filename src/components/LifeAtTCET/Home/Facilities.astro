@@ -1,15 +1,13 @@
 ---
 const {name, Day, Time, Venue, Register} = Astro.props;
 ---
-<div class="third-cards">
-    <div class="facility-img">
-        <img class="third-images" src={`/LifeAtTCET/Home/ThirdCards/${name}.png`} alt={name}/>
-    </div>
-    <div class="facility-text">
-        <h2>{name}</h2>
-        <p><span>Day:</span> {Day}</p>
-        <p><span>Time:</span> {Time}</p>
-        <p><span>Venue:</span> {Venue}</p>
-        <p><span>Register at</span> {Register}</p>
+<div class="flex flex-col h-[330px]">
+    <img class="border-gray-50 border-b-gray-50 shadow-[0_0_5px_#ccc] rounded-[10px] border-b-[130px] border-[10px] border-solid" src={`/LifeAtTCET/Home/ThirdCards/${name}.png`} alt={name}/>
+    <div class="relative bottom-[120px]">
+        <h2 class="text-base font-semibold leading-6 tracking-normal text-left pl-[15px] pb-[5px]">{name}</h2>
+        <p class="text-sm font-normal leading-5 tracking-normal text-left text-[#475467] pl-[15px]"><span class="font-semibold">Day:</span> {Day}</p>
+        <p class="text-sm font-normal leading-5 tracking-normal text-left text-[#475467] pl-[15px]"><span class="font-semibold">Time:</span> {Time}</p>
+        <p class="text-sm font-normal leading-5 tracking-normal text-left text-[#475467] pl-[15px]"><span class="font-semibold">Venue:</span> {Venue}</p>
+        <p class="text-sm font-normal leading-5 tracking-normal text-left text-[#475467] pl-[15px]"><span class="font-semibold">Register at</span> {Register}</p>
     </div>
 </div>

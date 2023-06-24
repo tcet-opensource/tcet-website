@@ -1,22 +1,22 @@
 ---
 import Layout from '../../layouts/Layout.astro'
-import "../../styles/life-at-tcet-home.css";
 import FirstCards from "../../components/LifeAtTCET/Home/FirstCards.astro";
 import SecondCards from "../../components/LifeAtTCET/Home/SecondCards.astro";
 import ThirdCards from "../../components/LifeAtTCET/Home/ThirdCards.astro";
 ---
 <Layout title="Life@TCET" description='Life@TCET-Home page'>
-    <div class="main-section">
-        <h1 class="text head1">Life@TCET</h1>
+    <div class="sm:items-center max-w-[831px] flex flex-col gap-[15px] pl-3 rounded-[7px]">
+        <!-- Fraunces font-family using font-title -->
+        <h1 class="font-title sm:text-center text-4xl font-normal leading-[44px] tracking-[-0.02em] text-left text-[#101828">Life@TCET</h1>
         <FirstCards />
         <SecondCards />
-        <h2 class="text head2">Life @ TCET</h2>
-        <ul class="list">
-            <li class="lis">TCET Acheivements:A Mark of Quality Education</li>
-            <li class="lis">Institute is NAAC accredited with grade “A” in 1 Cycle for 5 years w.e.f. 30/10/2017. Undergraduate Programs of E&TC IT, COMP, and ELEX are accredited by National Board of Accreditation, New Delhi w.e.f. 1.7.2019 for 3 years which is extended upto 30.6.2022 in the current academic year</li>
-            <li class="lis">Institute is ranked among top 200 colleges in the country where the institute is ranked 193 in NIRF India Ranking 2019 in the Engineering category and 68th & 78th in All India Rank by Outlook survey published in June 2019 & May 2018 respectively</li>
+        <h2 class="text-2xl font-semibold leading-8 tracking-normal text-left">Life @ TCET</h2>
+        <ul class="pl-[30px]">
+            <li style="list-style-type: disc;" class="sm:w-[320px] text-base font-medium leading-6 tracking-normal text-left text-[#757575] w-[750px]">TCET Acheivements:A Mark of Quality Education</li>
+            <li style="list-style-type: disc;" class="sm:w-[320px] text-base font-medium leading-6 tracking-normal text-left text-[#757575] w-[750px]">Institute is NAAC accredited with grade “A” in 1 Cycle for 5 years w.e.f. 30/10/2017. Undergraduate Programs of E&TC IT, COMP, and ELEX are accredited by National Board of Accreditation, New Delhi w.e.f. 1.7.2019 for 3 years which is extended upto 30.6.2022 in the current academic year</li>
+            <li style="list-style-type: disc;" class="sm:w-[320px] text-base font-medium leading-6 tracking-normal text-left text-[#757575] w-[750px]">Institute is ranked among top 200 colleges in the country where the institute is ranked 193 in NIRF India Ranking 2019 in the Engineering category and 68th & 78th in All India Rank by Outlook survey published in June 2019 & May 2018 respectively</li>
         </ul>
-        <h2 class="text head2">Facilities@TCET</h2>
+        <h2 class="text-2xl font-semibold leading-8 tracking-normal text-left">Facilities@TCET</h2>
         <ThirdCards />
     </div>
 </Layout>
