@@ -1,0 +1,22 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import "../../styles/life-at-tcet-home.css";
+import FirstCards from "../../components/LifeAtTCET/Home/FirstCards.astro";
+import SecondCards from "../../components/LifeAtTCET/Home/SecondCards.astro";
+import ThirdCards from "../../components/LifeAtTCET/Home/ThirdCards.astro";
+---
+<Layout title="Life@TCET" description='Life@TCET-Home page'>
+    <div class="main-section">
+        <h1 class="text head1">Life@TCET</h1>
+        <FirstCards />
+        <SecondCards />
+        <h2 class="text head2">Life @ TCET</h2>
+        <ul class="list">
+            <li class="lis">TCET Acheivements:A Mark of Quality Education</li>
+            <li class="lis">Institute is NAAC accredited with grade “A” in 1 Cycle for 5 years w.e.f. 30/10/2017. Undergraduate Programs of E&TC IT, COMP, and ELEX are accredited by National Board of Accreditation, New Delhi w.e.f. 1.7.2019 for 3 years which is extended upto 30.6.2022 in the current academic year</li>
+            <li class="lis">Institute is ranked among top 200 colleges in the country where the institute is ranked 193 in NIRF India Ranking 2019 in the Engineering category and 68th & 78th in All India Rank by Outlook survey published in June 2019 & May 2018 respectively</li>
+        </ul>
+        <h2 class="text head2">Facilities@TCET</h2>
+        <ThirdCards />
+    </div>
+</Layout>

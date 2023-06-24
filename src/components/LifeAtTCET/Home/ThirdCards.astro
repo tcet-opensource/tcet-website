@@ -1,0 +1,17 @@
+---
+import Facilities from "./Facilities.astro";
+import {facilities} from "./facilities";
+const allImages = await Astro.glob('../../../../public/LifeAtTCET/Home/ThirdCards/*.png');
+---
+<div class="facility-section">
+    {facilities.map((facility) => 
+    <Facilities 
+    key={facility.id} 
+    name={facility.name} 
+    img={facility.img}
+    Day={facility.Day}
+    Time={facility.Time}
+    Venue={facility.Venue}
+    Register={facility.Register}
+    />)}
+</div>

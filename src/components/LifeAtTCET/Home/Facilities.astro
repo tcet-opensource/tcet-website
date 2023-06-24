@@ -1,0 +1,15 @@
+---
+const {name, Day, Time, Venue, Register} = Astro.props;
+---
+<div class="third-cards">
+    <div class="facility-img">
+        <img class="third-images" src={`/LifeAtTCET/Home/ThirdCards/${name}.png`} alt={name}/>
+    </div>
+    <div class="facility-text">
+        <h2>{name}</h2>
+        <p><span>Day:</span> {Day}</p>
+        <p><span>Time:</span> {Time}</p>
+        <p><span>Venue:</span> {Venue}</p>
+        <p><span>Register at</span> {Register}</p>
+    </div>
+</div>

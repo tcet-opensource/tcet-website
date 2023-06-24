@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces&display=swap');
+
+
+.main-section {
+    width: 1280px;
+    height: 1480px;
+    padding-left: 12px;
+    width: 831px;
+    height: 1388px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.images {
+    padding: 12px;
+    float: left;
+    background: #F7F7F7;
+    border: 1px solid #E2E2E2;
+    border-radius: 5px;
+    box-shadow: 0px 8px 8px -4px #1018280A;
+    box-shadow: 0px 20px 24px -4px #1018281A;
+}
+.facility-section {
+    display: flex;
+    flex-direction: row;
+    gap: 17px;
+}
+.third-cards {
+    display: flex;
+    flex-direction: column;
+}
+.third-images {
+    outline: none;
+    border: 10px solid #F9FAFB;
+    border-bottom: 130px solid #F9FAFB;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #ccc;
+}
+.third-cards h2 {
+    padding-left: 15px;
+    padding-bottom: 5px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.third-cards > p > span {
+    font-weight: 600; 
+}
+.third-cards p {
+    padding-left: 15px; 
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #475467;
+}
+
+.head1 {
+    font-family: 'Fraunces', serif;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 44px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: #101828;
+}
+
+.head2 {
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.list {
+    padding-left: 30px;
+}
+
+.lis {
+    list-style: disc;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #757575;
+    width: 750px;
+}
+
+.facility-text {
+    position: relative;
+    bottom: 120px;
+}
+span {
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    .cards {
+        justify-content: center;
+    }
+    .main-section {
+        width: 500px;
+        height: 2750px;
+        align-items: center;
+    }
+    .facility-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .lis {
+        width: 350px;
+    }
+}

@@ -1,0 +1,6 @@
+---
+const allImages = await Astro.glob('../../../../public/LifeAtTCET/Home/SecondCards/*.png');
+---
+<div class="cards">
+    {allImages.map((img) => <img class="images" src={img.default.src} alt=""/>)}
+</div>
