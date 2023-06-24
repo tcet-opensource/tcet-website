@@ -17,8 +17,8 @@ primaryLinks = primaryLinks.map(links => {
 })
 ---
 
-<aside id="sidebar" class="absolute md:relative bg-white w-3/5 md:w-1/3 lg:w-1/4 px-4 py-2 sm:p-6 flex flex-col flex-wrap gap-2 -left-[57%] md:left-10 border border-gray-200 rounded-md shadow-[#1018280F] shadow-lg sm:shadow-md transition-[left] duration-500">
-            
+<aside id="sidebar" class="absolute md:relative md:-translate-x-0 bg-white w-3/5 md:w-1/3 lg:w-1/4 px-4 py-2 sm:p-6 flex flex-col flex-wrap gap-2 -left-[57%] md:left-10 border border-gray-200 rounded-md shadow-[#1018280F] shadow-lg sm:shadow-md transition-[left] duration-500">
+
     <div id="sidebar-toggle" class="md:hidden bg-white aspect-square h-8 absolute -right-5 top-3 border flex justify-center items-center border-gray-200 rounded-md cursor-pointer">
         <img id="sidebar-btn" src="/misc/chevron-double-right.svg" class="object-contain object-center transition-transform duration-500" />
     </div>
@@ -78,5 +78,4 @@ primaryLinks = primaryLinks.map(links => {
             sidebar?.classList.add("absolute");
         }
     })
-
 </script>
