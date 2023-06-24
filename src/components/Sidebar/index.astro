@@ -60,9 +60,16 @@ primaryLinks = primaryLinks.map(links => {
     });
 
     document.addEventListener("scroll", () => {
-        let scroll = window.scrollY
-        if(sidebar?.classList.contains("-left-[57%]")) return;
+        if(sidebar?.classList.contains("-left-[57%]")) {
+            if(window.scrollY > 120) {
+                sidebar?.classList.add("sticky", "top-0", "-translate-x-[95%]");
+            } else {
+                sidebar?.classList.remove("sticky", "top-0", "-translate-x-[95%]");
+            }
+            return;
+        };
         
+        // open sidebar
         if(window.scrollY > 120) {
             sidebar?.classList.add("sticky", "top-0", "-translate-x-1");
             sidebar?.classList.remove("absolute");
