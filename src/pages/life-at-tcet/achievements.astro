@@ -8,7 +8,6 @@ const tableRows = [
     c3: "Electoworks-National level Electronics competition, SPIT, Mumbai",
     c4: "1",
     c5: "National",
-    background: "#EFF8FF",
   },
   {
     c1: "2",
@@ -16,7 +15,6 @@ const tableRows = [
     c3: "Xavier MUN",
     c4: "2",
     c5: "National",
-    background: "white",
   },
   {
     c1: "3",
@@ -24,7 +22,6 @@ const tableRows = [
     c3: "TCET MUN",
     c4: "2",
     c5: "Inter-College",
-    background: "#EFF8FF",
   },
   {
     c1: "4",
@@ -32,7 +29,6 @@ const tableRows = [
     c3: "Mumbai MUN",
     c4: "3",
     c5: "National",
-    background: "white",
   },
   {
     c1: "5",
@@ -40,7 +36,6 @@ const tableRows = [
     c3: "Xavier MUN",
     c4: "3",
     c5: "Inter-College",
-    background: "#EFF8FF",
   },
   {
     c1: "6",
@@ -48,7 +43,6 @@ const tableRows = [
     c3: "Xavier MUN",
     c4: "3",
     c5: "Inter-College",
-    background: "white",
   },
   {
     c1: "7",
@@ -56,7 +50,6 @@ const tableRows = [
     c3: "Xavier MUN",
     c4: "3",
     c5: "National",
-    background: "#EFF8FF",
   },
 ];
 ---
@@ -75,7 +68,7 @@ const tableRows = [
   description='thakur College of Engineering and Technology'
 >
 <div class="p-4 lg:p-16">
-  <div class="text-4xl mb-8 font-[Fraunces]">Achievements</div>
+  <div class="text-4xl mb-8 font-title">Achievements</div>
   <div class='overflow-x-auto'>
     <table class='table-auto text-blue-900 min-w-[730px] md:min-w-full text-sm'>
       <thead class='th text-black font-semibold'>
@@ -90,7 +83,7 @@ const tableRows = [
       <body>
         {
           tableRows.map((t) => (
-            <tr class='td text-center' style={{ background: t.background }}>
+            <tr class='td text-center odd:bg-[#EFF8FF]'>
               <td class='px-2 py-3'>{t.c1}</td>
               <td>{t.c2}</td>
               <td>{t.c3}</td>
