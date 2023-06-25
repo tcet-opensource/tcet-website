@@ -1,0 +1,45 @@
+---
+const { title, img, message, name } = Astro.props;
+// use localhost:3000/about/pages to access all the links
+---
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+    rel="stylesheet"
+/>
+<message class="inline-block px-5 py-4 text-justify">
+<!-- <message class="main"> -->
+    <div class="pt-2.5 pr-2.5 pl-2.5  font-normal text-4xl leading-10 gap-10 tracking-tight" style="font-family: Fraunces">{title}</div>
+    <div class="pt-3 gap-4">
+        <div class="flex mx-auto w-72 h-120 pt-5 pr-5 pb-5 md:float-left">
+            <img class="rounded-lg" src={img} />
+        </div>
+        <div class="pt-3 p-1">
+            <p
+                class="font-[Inter] text-base font-normal text-[#475467] first-line:uppercase first-line:tracking-widest first-letter:text-4xl first-letter:font-bold first-letter:text-[#475467] first-letter:mr-1 first-letter:float-leftmd:text-justify">
+                {message}
+            </p>
+            <p class="pt-2 font-[Inter] text-xl font-[600] text-[#475467] italic">
+                {name}
+            </p>
+        </div>
+    </div>
+</message>
+<style>
+    /* .main {
+        width:831px;
+        padding: 20px 24px 20px 24px;
+        display: inline-block;
+        text-align: justify;
+    } */
+    /* .title {
+        padding: 10px 10px 0px 10px;
+        font-family: Fraunces;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 49.32px;
+        gap: 10px;
+    } */
+</style>

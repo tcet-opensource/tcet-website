@@ -1,0 +1,21 @@
+---
+import Message from "../../components/About/Message/index.astro";
+
+import Header from "../../components/Header/index.astro";
+import Footer from "../../components/Footer/index.astro";
+const data={
+    title:"Principal's Message",
+    img:"../public/About/Message/principal.png",
+    message:" I warmly welcome all aspiring engineering students to Thakur College of Engineering and Technology. With cuttingedge research methods and technology, the highly qualified and experienced faculty at TCET is dedicated to aid students in unfolding their academic potential. Excellence is given the utmost attention at our institute as we uphold the highest standards of education and are dedicated to pushing its boundaries. Our dedication to excellence extends beyond the classroom; we take a lead role in conducting conferences, workshops, seminars, guest lectures, and other extracurricular events. These exercises encourage students to think creatively and critically, significantly enhancing their professional success. This has turned TCET into a touchstone for holistic multidisciplinary education. Engineering is a discipline dedicated to problem-solving through the creative application of principles in science and mathematics. Engineers are multifaceted thinkers who produce original and valuable solutions to diverse problems. They not only connect science and technology with society but also are the pillar of our nation's industrial and technological advancement. I am proud to announce that Thakur College of Engineering and Technology, since its inception in 2001, has been concentrating on newly emerging technological innovations and empowering students to solve tomorrow's challenges.TCET will prepare you with a breadth of engineering skills and knowledge while developing specific expertise and analytical skills in an area of technical specialisation. Through our application-based courses, you will gain hands-on, real-world experience that will allow you to succeed in the industry, pursue graduate studies, or start a business in your chosen specialisation or general engineering practice. Our industry-oriented curriculum has given TCET a strong placement record.I invite you to join this vibrant and exciting new world of science and technology, and I wish all aspiring students the best of luck in a rewarding career and a bright future!.",
+    name:"DR. B.K.MISHRA"
+}
+---
+    <Header />
+    <Message
+    title={data.title}
+    img={data.img},
+    message={data.message}
+    name={data.name}
+/>
+    <!-- <slot /> -->
+    <Footer />

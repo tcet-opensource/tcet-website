@@ -1,0 +1,22 @@
+---
+import Message from "../../components/About/Message/index.astro";
+
+import Header from "../../components/Header/index.astro";
+import Footer from "../../components/Footer/index.astro";
+const data={
+    title:"Chairman's Message",
+    img:"../public/About/Message/chairman.png",
+    message:" TCET always believes in quality education Quality is not an act but a habit is a maxim that Thakur from its inception in the academic year 2001-02. Today institutes have well-designed and well-executed systems and processes, maintaining transparency, accountability and  integrity. Quality of product and services offered to the students. In the twenty-first century, advances in science and technology have changed people's lives by giving them luxuries in every area. Science and technical revolutions are inexorable because they support economic growth, advancements in healthcare, education, and infrastructure, as well as the fulfilment of all human needs. As a result, youngsters have a wider range of possibilities to work towards their career. As they are the leaders of the next generation, science and technical institutes are essential to maximising these opportunities. All these requirements led to the creation of the autonomous Thakur College of Engineering and Technology (TCET), which has been expanding rapidly. We think that Generation Y is the generation that will establish nations and change the globe. In accordance with our mission statement, the institute thus offers the best academic environment, highquality instruction, and cutting-edge facilities of global standards. Our consistent academic excellence, student participation and awards at the state and national levels, successful placement rates, industry partnerships, national and international recognitions and awards are just a few of the achievements that enhance the institute's reputation. We offer venues for co-curricular and extracurricular activities that aid in students' overall development in addition to academic success. In order to instil social, moral, ethical, and universal principles that help them become responsible global citizens, student-led groups, social, cultural, and sporting events, among many others are held. Numerous accomplished students from around the world and happy parents are living examples of our success in the technical education. You are all cordially invited to TCET for the thrilling journey towards success. Let me reassure you that the TCET campus environment will make these early years of your professional career worthwhile to cherish.",
+    name:"MR.V.K.SINGH",
+    url:"../../about/chairman"
+}
+---
+    <Header />
+    <Message
+    title={data.title}
+    img={data.img},
+    message={data.message}
+    name={data.name}
+/>
+    <!-- <slot /> -->
+    <Footer />
