@@ -74,30 +74,33 @@ const tableRows = [
   title='Welcome to TCET Mumbai'
   description='thakur College of Engineering and Technology'
 >
-  <div class="overflow-x-auto">
-  <table class='table-auto text-blue-900 min-w-[730px] md:min-w-full text-sm'>
-    <thead class='th text-black font-bold'>
-      <tr>
-        <th class="py-2 md:px-3">Sr. No</th>
-        <th class="py-2 md:px-3">Year</th>
-        <th class="py-2 md:px-3">Name of Event</th>
-        <th class="py-2 md:px-3">Position</th>
-        <th class="py-2 md:px-3">Type of Event</th>
-      </tr>
-    </thead>
-    <body>
-      {
-        tableRows.map((t) => (
-          <tr class='td text-center' style={{ background: t.background }}>
-            <td class='px-2 py-3'>{t.c1}</td>
-            <td>{t.c2}</td>
-            <td>{t.c3}</td>
-            <td>{t.c4}</td>
-            <td>{t.c5}</td>
-          </tr>
-        ))
-      }
-    </body>
-  </table>
+<div class="p-4 lg:p-16">
+  <div class="text-4xl mb-8 font-[Fraunces]">Achievements</div>
+  <div class='overflow-x-auto'>
+    <table class='table-auto text-blue-900 min-w-[730px] md:min-w-full text-sm'>
+      <thead class='th text-black font-semibold'>
+        <tr>
+          <th class='py-2 md:px-3'>Sr. No</th>
+          <th class='py-2 md:px-3'>Year</th>
+          <th class='py-2 md:px-3'>Name of Event</th>
+          <th class='py-2 md:px-3'>Position</th>
+          <th class='py-2 md:px-3'>Type of Event</th>
+        </tr>
+      </thead>
+      <body>
+        {
+          tableRows.map((t) => (
+            <tr class='td text-center' style={{ background: t.background }}>
+              <td class='px-2 py-3'>{t.c1}</td>
+              <td>{t.c2}</td>
+              <td>{t.c3}</td>
+              <td>{t.c4}</td>
+              <td>{t.c5}</td>
+            </tr>
+          ))
+        }
+      </body>
+    </table>
+  </div>
   </div>
 </Layout>
