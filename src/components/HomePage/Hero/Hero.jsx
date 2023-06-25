@@ -68,7 +68,7 @@ const App = () => {
         <div className="absolute top-4 left-4 lg:top-auto lg:left-auto lg:bottom-4 lg:right-4 z-10">
           <button className="px-4 py-2 bg-white rounded-3xl text-sm text-black" onClick={handleClick}>
           <svg width="24" height="24" viewBox="0 0 24 24" className="inline-block mr-2" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 12C0 5.37257 5.3726 0 12 0C15.1826 0 18.2349 1.26428 20.4853 3.5147C22.7357 5.76515 24 8.81741 24 12C24 18.6274 18.6274 24 12 24C5.3726 24 0 18.6274 0 12ZM9.80406 17.136L16.8 12.768C17.0618 12.6003 17.2202 12.3109 17.2202 12C17.2202 11.6891 17.0618 11.3996 16.8 11.232L9.78003 6.86401C9.50355 6.68968 9.15426 6.67897 8.86761 6.83597C8.58096 6.99302 8.40195 7.29313 8.40006 7.62001V16.38C8.39619 16.7148 8.57849 17.0241 8.87328 17.1828C9.16808 17.3416 9.52664 17.3235 9.80406 17.136Z" fill="#101828"/>
+            <path fillRule="evenodd" clipRule="evenodd" d="M0 12C0 5.37257 5.3726 0 12 0C15.1826 0 18.2349 1.26428 20.4853 3.5147C22.7357 5.76515 24 8.81741 24 12C24 18.6274 18.6274 24 12 24C5.3726 24 0 18.6274 0 12ZM9.80406 17.136L16.8 12.768C17.0618 12.6003 17.2202 12.3109 17.2202 12C17.2202 11.6891 17.0618 11.3996 16.8 11.232L9.78003 6.86401C9.50355 6.68968 9.15426 6.67897 8.86761 6.83597C8.58096 6.99302 8.40195 7.29313 8.40006 7.62001V16.38C8.39619 16.7148 8.57849 17.0241 8.87328 17.1828C9.16808 17.3416 9.52664 17.3235 9.80406 17.136Z" fill="#101828"/>
           </svg>
             Play the Tour
           </button>
@@ -114,8 +114,7 @@ const App = () => {
                       height="100%" 
                       src="https://www.youtube.com/embed/EPEbkGYBw3s" 
                       title="YouTube video player" 
-                      frameborder="0" 
-                      allowfullscreen
+                      allowFullScreen
                       ref={iframeRef}>        
             </iframe>
 

@@ -12,17 +12,17 @@ import Awards from "../components/HomePage/Awards.jsx"
 ---
 
 <Layout title="Welcome to TCET Mumbai" description='Thakur College of Engineering and Technology' >
-	<main>
+	<main class="flex-1 box-border" >
 		<Hero />
 		<CertifiedSection/>
 		<About />
-		<Counter client:only="react"/>
+		<!-- <Counter client:only="react"/>
 		<Programmes/>
 
 		<div class="hidden sm:grid sm:grid-cols-1 lg:grid-cols-10 gap-6 sm:my-7 py-7 mx-10">         
 			<Events client:only="react"/>
 			<Awards client:only="react"/>
 		</div>
-		<MagazineSection />
+		<MagazineSection /> -->
 	</main>
 </Layout>

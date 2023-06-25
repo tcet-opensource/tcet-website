@@ -1,38 +1,52 @@
 ---
+import type { link } from "../../env";
 export interface Props {
-    primaryLinks: {
-        title: string;
-        link: any;
-    } [];
+    links: link[];
 }
 
-let { primaryLinks } = Astro.props;
-primaryLinks = primaryLinks.map(links => {
+let { links } = Astro.props;
+links = links.map((links) => {
     const { link } = links;
-    if(link[link.length - 1] !== '/') {
-        links.link = link + '/';
-    } 
+    if (link[link.length - 1] !== "/") {
+        links.link = link + "/";
+    }
 
     return links;
-})
+});
 ---
 
-<aside id="sidebar" class="absolute md:relative md:-translate-x-0 bg-white w-3/5 md:w-1/3 lg:w-1/4 px-4 py-2 sm:p-6 flex flex-col flex-wrap gap-2 -left-[57%] md:left-10 border border-gray-200 rounded-md shadow-[#1018280F] shadow-lg sm:shadow-md transition-[left] duration-500">
-
-    <div id="sidebar-toggle" class="md:hidden bg-white aspect-square h-8 absolute -right-5 top-3 border flex justify-center items-center border-gray-200 rounded-md cursor-pointer">
-        <img id="sidebar-btn" src="/misc/chevron-double-right.svg" class="object-contain object-center transition-transform duration-500" />
+<aside
+    id="sidebar"
+    class="fixed md:sticky h-[80%] bg-white w-3/5 md:w-1/3 lg:w-1/4 p-4 md:p-6 md:m-6  -left-[57%] md:left-0 md:top-6 border border-gray-200 rounded-md shadow-[#1018280F] shadow-lg sm:shadow-md duration-500"
+>
+    <div
+        id="sidebar-toggle"
+        class="md:hidden bg-white aspect-square h-8 absolute -right-5 top-3 border flex justify-center items-center border-gray-200 rounded-md cursor-pointer"
+    >
+        <img
+            id="sidebar-btn"
+            src="/misc/chevron-double-right.svg"
+            class="object-contain object-center transition-transform duration-500"
+        />
     </div>
-
-    { primaryLinks.map(links => (
-        <a 
-            href={links.link}
-            class={`text-gray-600 text-base font-sans ${Astro.url.pathname === links.link ? "bg-gray-100 font-semibold text-gray-900" : ""}`}
-        >
-            <div class="py-1 px-2 rounded-md hover:bg-gray-100">
-                {links.title}
-            </div>
-        </a>
-    )) }
+    <div class="flex flex-col gap-2 h-[100%] overflow-y-scroll overflow-x-hidden" >
+        {
+            links.map((links) => (
+                <a
+                    href={links.link}
+                    class={`text-gray-600 text-base rounded-lg font-sans ${
+                        Astro.url.pathname === links.link
+                            ? "bg-gray-100 font-semibold text-gray-900"
+                            : ""
+                    }`}
+                >
+                    <div class="py-1 px-2 rounded-md hover:bg-gray-100">
+                        {links.title}
+                    </div>
+                </a>
+            ))
+        }
+    </div>
 </aside>
 
 <script>
@@ -41,10 +55,25 @@ primaryLinks = primaryLinks.map(links => {
     const sidebarBtn = document.getElementById("sidebar-btn");
 
     const onClickOutside = (element, callback) => {
-        document.addEventListener("click", e => {
-            if(!element.contains(e.target)) callback();
+        document.addEventListener("click", (e) => {
+            if (!element.contains(e.target)) callback();
         });
     };
+
+    // sidebar?.addEventListener("dragstart", e => {
+    //     e.stopPropagation();
+    //     sidebar?.classList.toggle("-left-[57%]");
+    //     sidebar?.classList.toggle("-left-1");
+    //     sidebarBtn?.classList.toggle("-rotate-180");
+    //     sidebar?.classList.replace("sticky", "absolute");
+    // })
+    sidebar?.addEventListener("click", (e) => {
+        e.stopPropagation();
+        sidebar?.classList.toggle("-left-[57%]");
+        sidebar?.classList.toggle("-left-1");
+        sidebarBtn?.classList.toggle("-rotate-180");
+        sidebar?.classList.replace("sticky", "absolute");
+    });
 
     onClickOutside(sidebar, () => {
         sidebar?.classList.replace("-left-1", "-left-[57%]");
@@ -52,30 +81,30 @@ primaryLinks = primaryLinks.map(links => {
         sidebar?.classList.replace("sticky", "absolute");
     });
 
-    sidebarToggle?.addEventListener("click", () => {
-        sidebar?.classList.toggle("-left-[57%]");
-        sidebar?.classList.toggle("-left-1");
-        sidebarBtn?.classList.toggle("-rotate-180");
-        sidebar?.classList.replace("sticky", "absolute");
-    });
+    // sidebarToggle?.addEventListener("click", () => {
+    //     sidebar?.classList.toggle("-left-[57%]");
+    //     sidebar?.classList.toggle("-left-1");
+    //     sidebarBtn?.classList.toggle("-rotate-180");
+    //     sidebar?.classList.replace("sticky", "absolute");
+    // });
 
-    document.addEventListener("scroll", () => {
-        if(sidebar?.classList.contains("-left-[57%]")) {
-            if(window.scrollY > 120) {
-                sidebar?.classList.add("sticky", "top-0", "-translate-x-[95%]");
-            } else {
-                sidebar?.classList.remove("sticky", "top-0", "-translate-x-[95%]");
-            }
-            return;
-        };
-        
-        // open sidebar
-        if(window.scrollY > 120) {
-            sidebar?.classList.add("sticky", "top-0", "-translate-x-1");
-            sidebar?.classList.remove("absolute");
-        } else {
-            sidebar?.classList.remove("sticky", "top-0", "-translate-x-1");
-            sidebar?.classList.add("absolute");
-        }
-    })
+    // document.addEventListener("scroll", () => {
+    // if(sidebar?.classList.contains("-left-[57%]")) {
+    //     if(window.scrollY > 120) {
+    //         sidebar?.classList.add("sticky", "top-0", "-translate-x-[95%]");
+    //     } else {
+    //         sidebar?.classList.remove("sticky", "top-0", "-translate-x-[95%]");
+    //     }
+    //     return;
+    // };
+
+    // open sidebar
+    // if(window.scrollY > 120) {
+    //     sidebar?.classList.add("sticky", "top-0", "-translate-x-1");
+    //     sidebar?.classList.remove("absolute");
+    // } else {
+    //     sidebar?.classList.remove("sticky", "top-0", "-translate-x-1");
+    //     sidebar?.classList.add("absolute");
+    // }
+    // })
 </script>

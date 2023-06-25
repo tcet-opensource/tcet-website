@@ -1,30 +1,16 @@
 ---
-import Sidebar from "../../components/Sidebar/index.astro"
+import Layout from "../../layouts/Layout.astro";
 console.log(Astro.url.pathname);
-const primaryLinks = [
-    { title: "About TCET",                  link: "/about",  },
-    { title: "Recognition & Awards",        link: "/about/recognition-awards", },
-    { title: "Chariman's Message",          link: "/about/charimans-message", },
-    { title: "CEO's Message",               link: "/about/CEOs-message", },
-    { title: "Principle's Message",         link: "/about/principle-message", },
-    { title: "Dean RnD Message",            link: "/about/dean-RnD-message", },
-    { title: "Dean SSW Message",            link: "/about/dean-SSW-message",  },
-    { title: "Institutional Growth",        link: "/about/institutional-growth", },
-    { title: "Testimonials",                link: "/about/testimonials", },
-    { title: "Educational Survey",          link: "/about/documentation#educational-survey", },
-    { title: "Documentation",               link: "/about/documentation",  },
-    { title: "Institutional Activities",    link: "/about/documentation#institutional-activities", },
-    { title: "NIRF Data",                   link: "/about/documentation#NIRF-data",  },
-    { title: "Mandatory Disclosure",        link: "/about/documentation/mandotory-disclosure.pdf", },
-    { title: "Perspective Plan",            link: "/about/documentation/perspective-plan.pdf", },
-]
+import {getSubLinksFirstLevel} from "../../data/navlinks"
+
+const subLinks = getSubLinksFirstLevel("About us") || []
+
 ---
 
-<section class="relative">
-    <Sidebar 
-        primaryLinks={primaryLinks}
-    />
-    <div>
-        Hello Everyone this is the testing page for Recognition and Awards
-    </div>
-</section>
+<Layout sidebar={subLinks} title="Welcome to TCET Mumbai" description='Thakur College of Engineering and Technology'  >
+    <main class=" " >
+        <div class="h-[200vh]" >
+            Hello Everyone this is the testing page for Recognition and Awards
+        </div>
+    </main>
+</Layo>

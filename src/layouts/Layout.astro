@@ -4,19 +4,21 @@ import { SEO } from "astro-seo";
 export interface Props {
   title: string;
   description: string;
+  sidebar?: link[];
 }
 
-const { title, description } = Astro.props;
+const { title, description, sidebar } = Astro.props;
 import Header from "../components/Header/index.astro";
 import Footer from "../components/Footer/index.astro";
-
+import Sidebar from "../components/Sidebar/index.astro";
 import "../styles.css";
+import type { link } from "../env";
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="overflow-x-hidden" >
-	<head>
-		<meta charset="UTF-8" />
+<html lang="en" class="overflow-x-hidden">
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" />  -->
     <meta name="generator" content={Astro.generator} />
@@ -54,11 +56,13 @@ import "../styles.css";
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
     <meta name="msapplication-TileColor" content="#00aba9" />
     <meta name="theme-color" content="#ffffff" />
-	</head>
-	<body>
-		<Header />
-
-		<slot />
-		<Footer />
-	</body>
+  </head>
+  <body>
+    <Header />
+    <div class={`${sidebar ? "flex" : ""}`}>
+      {sidebar && <Sidebar links={sidebar} />}
+      <slot />
+    </div>
+    <Footer />
+  </body>
 </html>

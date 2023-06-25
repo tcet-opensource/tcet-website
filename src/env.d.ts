@@ -17,7 +17,13 @@ export type StaffTNP = {
 export type link = {
   title: string;
   link: string;
+  icon?: string;
+  description?: string;
   subLinks?: link[];
+  aside?: {
+    title: string;
+    links: link[];
+  }
 }
 
 export type imageLink =  {
