@@ -1,5 +1,4 @@
 ---
-import AboutHomePage from '../components/About/Homepage/index.astro';
 import { SEO } from "astro-seo";
 
 export interface Props {
@@ -58,8 +57,7 @@ import "../styles.css";
 	</head>
 	<body>
 		<Header />
-    <AboutHomePage />
-		<!-- <slot /> -->
+		<slot />
 		<Footer />
 	</body>
 </html>
