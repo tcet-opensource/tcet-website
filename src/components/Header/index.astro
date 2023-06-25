@@ -1,7 +1,8 @@
 ---
 import type { link } from "../../env";
-import Accordian from "./Accordian.tsx";
-import MobileNav from "./MobileNav.tsx";
+import Accordian from "./SecondaryNav/Accordian";
+import MobileNav from "./SecondaryNav/MobileNav";
+import {secondaryLinks} from "./SecondaryNav/secondaryLinks";
 
 const primaryLinks: link[] = [
   {
@@ -19,64 +20,64 @@ const primaryLinks: link[] = [
 
 ];
 
-const secondaryLinks: link[] = [
-  {
-    title: "Home",
-    link: "/",
-  },
-  {
-    title: "About us",
-    link: "https://www.tcetmumbai.in/About%20Us.html",
-  },
-  {
-    title: "Admissions",
-    link: "https://www.tcetmumbai.in/image/whyTCET.pdf",
-    // subLinks: [
-    // {
-    //     title: "Placement",
-    //     link: "/placement",
-    //   },
-    //   {
-    //     title: "Students Placed",
-    //     link: "/students-placed",
-    //   },
+// const secondaryLinks: link[] = [
+//   {
+//     title: "Home",
+//     link: "/",
+//   },
+//   {
+//     title: "About us",
+//     link: "https://www.tcetmumbai.in/About%20Us.html",
+//   },
+//   {
+//     title: "Admissions",
+//     link: "https://www.tcetmumbai.in/image/whyTCET.pdf",
+//     // subLinks: [
+//     // {
+//     //     title: "Placement",
+//     //     link: "/placement",
+//     //   },
+//     //   {
+//     //     title: "Students Placed",
+//     //     link: "/students-placed",
+//     //   },
 
 
-    // ],
-  },
-  {
-    title: "Academics",
-    link: "https://www.tcetmumbai.in/aboutacademics.html",
-  },
-  {
-    title: "RnD",
-    link: "https://www.tcetmumbai.in/rnd_home.html",
-  },
-  {
-    title: "Training and Placement",
-    link: "https://www.tcetmumbai.in/TNP%20home.html",
-  },
-  {
-    title: "HOC",
-    link: "https://www.tcetmumbai.in/About%20HOC.html",
-  },
-  {
-    title: "Examination",
-    link: "https://www.tcetmumbai.in/aboutexamsection.html",
-  },
-  {
-    title: "Central Library",
-    link: "https://www.tcetmumbai.in/aboutLRC.html",
-  },
-  {
-    title: "Life @TCET",
-    link: "https://www.tcetmumbai.in/aboutLifeTCET.html",
-  },
-  {
-    title: "Events",
-    link: "https://www.tcetmumbai.in/studentActivities.html",
-  },
-];
+//     // ],
+//   },
+//   {
+//     title: "Academics",
+//     link: "https://www.tcetmumbai.in/aboutacademics.html",
+//   },
+//   {
+//     title: "RnD",
+//     link: "https://www.tcetmumbai.in/rnd_home.html",
+//   },
+//   {
+//     title: "Training and Placement",
+//     link: "https://www.tcetmumbai.in/TNP%20home.html",
+//   },
+//   {
+//     title: "HOC",
+//     link: "https://www.tcetmumbai.in/About%20HOC.html",
+//   },
+//   {
+//     title: "Examination",
+//     link: "https://www.tcetmumbai.in/aboutexamsection.html",
+//   },
+//   {
+//     title: "Central Library",
+//     link: "https://www.tcetmumbai.in/aboutLRC.html",
+//   },
+//   {
+//     title: "Life @TCET",
+//     link: "https://www.tcetmumbai.in/aboutLifeTCET.html",
+//   },
+//   {
+//     title: "Events",
+//     link: "https://www.tcetmumbai.in/studentActivities.html",
+//   },
+// ];
 ---
 
 <header class="mb-4 lg:mb-8 xl:mb-10 ">
@@ -171,10 +172,10 @@ const secondaryLinks: link[] = [
     {
       secondaryLinks.map((s) => (
         <span class="flex items-center gap-2">
-          {!s.subLinks && <a class="text-xs xl:text-sm   hover:underline" href={s.subLinks?"":s.link}>
+          {(!s.leftPanel || !s.rightPanel) && <a class="text-xs xl:text-sm   hover:underline" href={(s.leftPanel || s.rightPanel) ? "" : s.link}>
             {s.title}
           </a>}
-          {s.subLinks && <Accordian title={s.title} client:load links={s.subLinks} />}
+          {s.leftPanel && s.rightPanel &&  <Accordian client:load title={s.title} leftpanel={s.leftPanel} rightpanel={s.rightPanel} />}
         </span>
       ))
     }
