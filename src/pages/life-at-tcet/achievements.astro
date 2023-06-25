@@ -1,7 +1,5 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { Table, Thead, Tbody, Tr, Th, Td } from "react-super-responsive-table";
-import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css";
 
 const tableRows = [
   {
@@ -65,40 +63,41 @@ const tableRows = [
 
 <astro>
   <style>
-    .table,
-    .table .th,
-    .table .td {
+    table,
+    table th,
+    table td {
       border: 1px solid #d1e9ff;
     }
   </style>
 </astro>
 <Layout
   title='Welcome to TCET Mumbai'
-  description='Thakur College of Engineering and Technology'
+  description='thakur College of Engineering and Technology'
 >
-
-  <Table className='table text-sm' hideTableHeaderOnMobile={false}>
-    <Thead className='th font-bold'>
-      <Tr>
-        <Th>Sr. No</Th>
-        <Th>Year</Th>
-        <Th>Name of Event</Th>
-        <Th>Position</Th>
-        <Th>Type of Event</Th>
-      </Tr>
-    </Thead>
-    <Tbody>
+  <div class="overflow-x-auto">
+  <table class='table-auto text-blue-900 min-w-[730px] md:min-w-full text-sm'>
+    <thead class='th text-black font-bold'>
+      <tr>
+        <th class="py-2 md:px-3">Sr. No</th>
+        <th class="py-2 md:px-3">Year</th>
+        <th class="py-2 md:px-3">Name of Event</th>
+        <th class="py-2 md:px-3">Position</th>
+        <th class="py-2 md:px-3">Type of Event</th>
+      </tr>
+    </thead>
+    <body>
       {
         tableRows.map((t) => (
-          <Tr className='td text-center' style={{ background: t.background }}>
-            <Td className='px-2 py-3'>{t.c1}</Td>
-            <Td>{t.c2}</Td>
-            <Td>{t.c3}</Td>
-            <Td>{t.c4}</Td>
-            <Td>{t.c5}</Td>
-          </Tr>
+          <tr class='td text-center' style={{ background: t.background }}>
+            <td class='px-2 py-3'>{t.c1}</td>
+            <td>{t.c2}</td>
+            <td>{t.c3}</td>
+            <td>{t.c4}</td>
+            <td>{t.c5}</td>
+          </tr>
         ))
       }
-    </Tbody>
-  </Table>
+    </body>
+  </table>
+  </div>
 </Layout>
