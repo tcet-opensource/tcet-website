@@ -30,7 +30,10 @@ const Notification = () => {
   return (
     <div>
       {isOpen ? (
-        <div className="xl:w-96 lg:w-80 md:w-72 sm:w-64 w-4/5 fixed top-56 z-10 bg-white right-0 mx-8 rounded-lg">
+        <div
+          className="xl:w-96 lg:w-80 md:w-72 sm:w-64 w-4/5 fixed top-56 z-10 bg-white right-0 mx-8 rounded-lg hover:drop-shadow-xl
+        "
+        >
           <div className="flex flex-row justify-between px-6 py-3">
             <div className="font-semibold">Notification</div>
             <button onClick={onClickClose}>
@@ -52,7 +55,7 @@ const Notification = () => {
           </div>
           <div>
             {notification.map((item) => (
-              <div className="border-t-[1px] px-6 flex flex-row py-3 min-h-fit justify-start border-[#E4E7EC] items-baseline">
+              <div className="border-t px-6 flex flex-row py-3 min-h-fit justify-start border-[#E4E7EC] items-baseline">
                 <div className="min-h-[8px] min-w-[8px] max-h-[8px] max-w-[8px] rounded-full bg-blue-500 mr-4"></div>
                 <a href={item.link}>
                   <div className="text-sm ">{item.message}</div>
@@ -63,8 +66,11 @@ const Notification = () => {
         </div>
       ) : (
         <div className="fixed top-56 z-10 right-0 mx-8 rounded-lg">
-          <div className="px-6 py-3">
-            <button onClick={onClickOpen}>
+          <div className="px-3">
+            <button
+              onClick={onClickOpen}
+              className="bg-white p-3 rounded-full hover:drop-shadow-xl"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
