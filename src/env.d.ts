@@ -5,7 +5,7 @@ export type TestimonialType = {
     photo: string;
     name: string;
     position: string;
-  }
+}
 
 export type StaffTNP = {
   StaffName: string;

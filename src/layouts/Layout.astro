@@ -60,7 +60,7 @@ import type { link } from "../env";
   <body>
     <Header />
     <div class={`${sidebar ? "flex" : ""}`}>
-      {sidebar && <Sidebar links={sidebar} />}
+      { sidebar && <Sidebar links={sidebar} /> }
       <slot />
     </div>
     <Footer />
