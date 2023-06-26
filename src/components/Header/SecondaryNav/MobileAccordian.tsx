@@ -68,7 +68,7 @@ const MobileAccordian: React.FC<{
           onMouseOut={() => {
             setIsOn(false);
           }}
-          className="animate-fadeIn absolute top-5 right-0 rounded-xl p-4 bg-white border text-xs w-max z-10"
+          className="animate-fadeIn absolute top-5 right-0 rounded-xl p-4 bg-white border text-xs w-56 z-10"
         >
           {/* leftpanel */}
           <div className="flex flex-col gap-2">

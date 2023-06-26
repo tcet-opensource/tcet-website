@@ -68,27 +68,25 @@ const Accordian: React.FC<{
           onMouseOut={() => {
             setIsOn(false);
           }}
-          className="w-full animate-fadeIn fixed top-[10.2rem] left-0 bg-white border flex z-20"
+          className="w-screen animate-fadeIn fixed top-[10.2rem] left-0 bg-white border flex z-20"
         >
           {/* leftpanel */}
-          <div className="w-9/12 grid grid-cols-2 gap-4 p-8">
+          <div className="w-9/12 grid grid-cols-2 gap-2 p-8">
             {leftpanel.map((l) => (
-              <div className="flex gap-4 p-2">
+              <a
+                className="flex gap-4 p-4 hover:bg-[#F2F4F7] hover:cursor-pointer hover:rounded-lg"
+                href={l.link}
+              >
                 <div>
                   <img src={l.logo} />
                 </div>
                 <div>
-                  <div className="pb-2 w-full">
-                    <a
-                      href={l.link}
-                      className="hover:underline text-base text-[#101828] font-medium"
-                    >
-                      {l.title}
-                    </a>
+                  <div className="pb-2 text-base text-[#101828] font-medium">
+                    {l.title}
                   </div>
                   <div className="text-sm text-[#667085]">{l.subTitle}</div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
           {/* rightpanel */}
