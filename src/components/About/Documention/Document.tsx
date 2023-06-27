@@ -1,5 +1,3 @@
-
-
 interface DocumentProps {
   title: string;
   url: string;
@@ -9,9 +7,8 @@ interface DocumentProps {
 
 export const Documentation = ({ title, url, img }: DocumentProps) => {
   return (
-    <div className=''>
-      <a href={url}>
-        <div className=' p-3 gap-1 items-center flex flex-row  border border-solid shadow-sm rounded-lg hover:cursor-pointer '>
+        <a href={url}>
+        <div className=' p-3 gap-1 justify-center items-center flex flex-row  border border-solid shadow-sm rounded-lg hover:cursor-pointer '>
           <div>
             <img src={img} alt="test" />
           </div>
@@ -19,10 +16,9 @@ export const Documentation = ({ title, url, img }: DocumentProps) => {
             <p>{title}</p>
           </div>
         </div>
-      </a>
-    </div>
+        </a>
+     
   )
 }
 
 export default Documentation
-
