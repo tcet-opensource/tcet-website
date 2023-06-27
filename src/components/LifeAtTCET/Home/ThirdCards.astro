@@ -3,7 +3,7 @@ import Facilities from "./Facilities.astro";
 import {facilities} from "./facilities";
 const allImages = await Astro.glob('../../../../public/LifeAtTCET/Home/ThirdCards/*.png');
 ---
-<div class="flex flex-row gap-[20px] sm:flex-col">
+<div class="flex flex-row gap-6 sm:flex-col">
     {facilities.map((facility) => 
     <Facilities 
     key={facility.id} 
