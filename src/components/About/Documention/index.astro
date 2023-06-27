@@ -1,12 +1,11 @@
 ---
 import {
-    NIRFData,
-    InstitutionalActivitesData,
-    EducationalSurveyData,
+   data
 } from "./data";
 import Document from "./Document.tsx";
 ---
 
+<<<<<<< HEAD
 <main class="flex flex-col">
     <div>
         <p class="font-semibold text-lg text-[#667085] mx-7 mb-5 uppercase">
@@ -30,6 +29,40 @@ import Document from "./Document.tsx";
         </div>
     </div>
     <div class="mt-7">
+=======
+
+   
+    
+    <main class="flex flex-col">
+        {data.map((item ) => (
+          <div  class="mt-7">
+            <p class="font-semibold text-lg text-[#667085] mx-7 mb-5 uppercase">
+              {item.title}
+            </p>
+            <div class="gap-4 h-fit border rounded-lg border-blue-gray-200 shadow-md mx-8 p-4 w-auto mx-6 px-2 grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 justify-between items-center">
+                
+              {item.files.map((file ) => (
+                <div 
+                  class={`hover:bg-[${item.hoverColor}] bg-[${item.bgColor}]  text-[${item.textColor}] border border-solid border-[${item.borderColor}] rounded-lg`}>
+                        <div>
+                        <Document
+                        title={file.title}
+                        url={file.url}
+                        color={item.textColor}
+                        />
+                    </div>
+                </div>
+              ))}
+          
+            </div>
+          </div>
+        ))}
+      </main>
+      
+
+
+    <!-- <div class="mt-7">
+>>>>>>> 8539fc1266a9c90cb819714b3204c0667484178d
         <p class="font-semibold text-lg text-[#667085] mx-7 mb-5 uppercase">
             Institutional Activities
         </p>
@@ -58,6 +91,7 @@ import Document from "./Document.tsx";
         <div
             class="h-fit border rounded-lg border-blue-gray-200 shadow-md p-4 gap-10 w-auto mx-6 px-2 grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 "
         >
+<<<<<<< HEAD
             {
                 EducationalSurveyData.map((data) => (
                     <div class="hover:bg-[#deecfa] bg-[#F5FAFF] text-[#2E90FA] border border-solid border-[#84CAFF] rounded-lg">
@@ -69,6 +103,26 @@ import Document from "./Document.tsx";
                     </div>
                 ))
             }
+=======
+            <div
+                class="gap-10 w-auto mx-6 px-2 grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 justify-between items-center"
+            >
+                {
+                    EducationalSurveyData.map((data, index) => (
+                        <div
+                            key={index}
+                            class="hover:bg-[#deecfa] bg-[#F5FAFF] text-[#2E90FA] border border-solid border-[#2E90FA] rounded-lg"
+                        >
+                            <Document
+                                title={data.title}
+                                url={data.url}
+                                img="/AboutPage/Documentation/blue.svg"
+                            />
+                        </div>
+                    ))
+                }
+            </div>
+>>>>>>> 8539fc1266a9c90cb819714b3204c0667484178d
         </div>
-    </div>
+    </div> -->
 </main>
