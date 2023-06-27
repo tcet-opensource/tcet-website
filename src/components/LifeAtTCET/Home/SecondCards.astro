@@ -1,6 +1,0 @@
----
-const allImages = await Astro.glob('../../../../public/LifeAtTCET/Home/SecondCards/*.png');
----
-<div class="flex flex-wrap gap-4 sm:justify-center">
-    {allImages.map((img) => <img class="float-left border shadow-lg p-3 rounded-md border-solid border-[#E2E2E2]" src={img.default.src} alt=""/>)}
-</div>
