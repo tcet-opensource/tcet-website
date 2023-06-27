@@ -10,8 +10,8 @@ interface FooterProps {
 export const FooterSection: React.FC<FooterProps>= ({title,links}) => {
     return (
     <div>
-        <h2 className="mb-4 text-sm font-semibold font-small text-gray-400">{title}</h2>
-        <ul className="text-gray-500 font-medium">
+        <h2 className="mb-4 text-sm font-semibold font-small" style={{color:'#98A2B3'}}>{title}</h2>
+        <ul className="font-medium" style={{color:'#667085'}}>
             {
                 links.map((text) => (
                     <li className="mb-4">
