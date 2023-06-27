@@ -28,4 +28,4 @@ jobs:
       - name: Installation
         run: yarn
       - name: Build 
-        run: npm build
+        run: yarn build
