@@ -14,17 +14,12 @@ const Accordian: React.FC<{
   return (
     <span
       ref={ref2}
-      className="w-full text-sm lg:text-xs xl:text-sm flex justify-between items-center gap-2"
+      className="w-full text-sm lg:text-xs xl:text-sm flex justify-between items-center gap-2 p-2"
       onMouseOver={() => {
-        // console.log("mouse over");
         setIsOn(true);
       }}
       onMouseOut={() => {
-        // console.log("mouse out");
-        // setIsOn(false)
-        // setTimeout(() => {
-        //   setIsOn(false);
-        // },1000)
+        setIsOn(false);
       }}
     >
       <p>{title}</p>
