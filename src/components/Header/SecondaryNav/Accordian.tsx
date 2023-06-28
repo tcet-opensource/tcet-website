@@ -14,7 +14,7 @@ const Accordian: React.FC<{
   return (
     <span
       ref={ref2}
-      className="w-full relative text-sm lg:text-xs xl:text-sm flex justify-between items-center gap-2"
+      className="w-full text-sm lg:text-xs xl:text-sm flex justify-between items-center gap-2"
       onMouseOver={() => {
         // console.log("mouse over");
         setIsOn(true);
@@ -68,7 +68,7 @@ const Accordian: React.FC<{
           onMouseOut={() => {
             setIsOn(false);
           }}
-          className="w-screen animate-fadeIn fixed top-[10.2rem] left-0 bg-white border flex z-20"
+          className="w-screen animate-fadeIn absolute top-9 left-0 bg-white border flex z-20"
         >
           {/* leftpanel */}
           <div className="w-9/12 grid grid-cols-2 gap-2 p-8">
