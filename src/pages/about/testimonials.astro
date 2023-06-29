@@ -1,32 +1,46 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import TestimonialSwiper from '../../components/About/Testimonials/TestimonialSwiper';
-import { slideObjCorporate } from "../../components/About/Testimonials/data.js";
-import { slideObjExperts } from "../../components/About/Testimonials/data.js";
-import { slideObjFaculty } from "../../components/About/Testimonials/data.js";
-
+import Layout from "../../layouts/Layout.astro";
+import TestimonialSwiper from "../../components/About/Testimonials/TestimonialSwiper";
+import {
+  slideObjCorporate,
+  slideObjExperts,
+  slideObjFaculty,
+} from "../../components/About/Testimonials/data.js";
 ---
 
-<Layout title="Welcome to TCET Mumbai" description='Thakur College of Engineering and Technology' >
-  <main class = "p-4 lg:p-16">
-    <h1 class="text-3xl font-title sm:text-3xl md:text-4xl ">Testimonials</h1>
-    <section class="mt-4 lg:mt-8" >
-      <div class="flex flex-col  gap-4">
-        <h2 class="flex flex-start px-4 py-3 font-inter font-semibold text-md sm-text-md lg:text-xl text-blue-600 border rounded-md bg-blue-50">
+<Layout
+  title="Welcome to TCET Mumbai"
+  description="Thakur College of Engineering and Technology"
+>
+  <main class="p-4 lg:p-16">
+    <h1 class="text-3xl font-title sm:text-3xl md:text-4xl">Testimonials</h1>
+    <section class="mt-4 lg:mt-8">
+      <div class="flex flex-col gap-4">
+        <h2
+          class="flex flex-start px-4 py-3 font-inter font-semibold text-md sm-text-md lg:text-xl text-blue-600 border rounded-md bg-blue-50"
+        >
           CORPORATES
         </h2>
-        <TestimonialSwiper client:load twoSlideAtLarge data={slideObjCorporate} />
+        <TestimonialSwiper
+          client:load
+          twoSlideAtLarge
+          data={slideObjCorporate}
+        />
       </div>
 
-      <div class="flex flex-col  gap-4">
-        <h2 class="flex flex-start px-4 py-3  font-semibold text-md sm-text-md lg:text-xl text-green-600 border rounded-md bg-green-50">
+      <div class="flex flex-col gap-4">
+        <h2
+          class="flex flex-start px-4 py-3 font-semibold text-md sm-text-md lg:text-xl text-green-600 border rounded-md bg-green-50"
+        >
           EXPERTS
         </h2>
-        <TestimonialSwiper client:load  data={slideObjExperts} />
+        <TestimonialSwiper client:load data={slideObjExperts} />
       </div>
 
-      <div class="flex flex-col  gap-4">
-        <h2 class="flex flex-start px-4 py-3 font-inter font-semibold text-md sm-text-md lg:text-xl text-orange-600 border rounded-md bg-orange-50">
+      <div class="flex flex-col gap-4">
+        <h2
+          class="flex flex-start px-4 py-3 font-inter font-semibold text-md sm-text-md lg:text-xl text-orange-600 border rounded-md bg-orange-50"
+        >
           FACULTY
         </h2>
         <TestimonialSwiper client:load data={slideObjFaculty} />
@@ -34,4 +48,3 @@ import { slideObjFaculty } from "../../components/About/Testimonials/data.js";
     </section>
   </main>
 </Layout>
-

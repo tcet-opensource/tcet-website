@@ -1,17 +1,23 @@
 ---
 import Facilities from "./Facilities.astro";
-import {facilities} from "./facilities";
-const allImages = await Astro.glob('../../../../public/LifeAtTCET/Home/ThirdCards/*.png');
+import { facilities } from "./facilities";
+
 ---
-<h2 class="text-2xl font-semibold leading-8 tracking-normal">Facilities@TCET</h2>
-<div class="flex flex-row gap-6 sm:flex-col">
-    {facilities.map((facility) => 
-    <Facilities 
-    key={facility.id} 
-    name={facility.name} 
-    Day={facility.Day}
-    Time={facility.Time}
-    Venue={facility.Venue}
-    Register={facility.Register}
-    />)}
+
+<h2 class="text-2xl font-semibold leading-8 tracking-normal">
+    Facilities@TCET
+</h2>
+<div class="flex flex-col sm:flex-row gap-6 ">
+    {
+        facilities.map((facility) => (
+            <Facilities
+                key={facility.id}
+                name={facility.name}
+                Day={facility.Day}
+                Time={facility.Time}
+                Venue={facility.Venue}
+                Register={facility.Register}
+            />
+        ))
+    }
 </div>

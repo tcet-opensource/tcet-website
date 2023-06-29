@@ -22,10 +22,6 @@ module.exports = withMT({
       },
       animation: {
         fadeIn: "fadeIn 0.2s ease-in-out ",
-      },
-      screens: {
-        '3xl': '1920px',
-        'sm': {'min': '320px', 'max': '794px'}
       }
     },
   },

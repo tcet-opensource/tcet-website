@@ -1,8 +1,7 @@
 ---
 import Message from "../../components/About/Message/index.astro";
 
-import Header from "../../components/Header/index.astro";
-import Footer from "../../components/Footer/index.astro";
+import Layout from "../../layouts/Layout.astro";
 const data={
     title:"Vice-Principal's Message",
     img:"/About/Message/vcp.png",
@@ -10,12 +9,17 @@ const data={
     name:"DR. KAMAL SHAH"
 }
 ---
-    <Header />
-    <Message
-    title={data.title}
-    img={data.img},
-    message={data.message}
-    name={data.name}
-/>
-    <!-- <slot /> -->
-    <Footer />
+<Layout
+    title="Welcome to TCET Mumbai"
+    description="Thakur College of Engineering and Technology"
+>
+    <main>
+        <Message
+            title={data.title}
+            img={data.img}
+            ,
+            message={data.message}
+            name={data.name}
+        />
+    </main>
+</Layout>
