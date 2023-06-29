@@ -6,10 +6,15 @@ import {
    EducationalSurveyData,
 } from "../../components/About/Documention/data";
 import Document from "../../components/About/Documention/Document";
+import {getSubLinksFirstLevel} from "../../data/navlinks"
+
+const subLinks = getSubLinksFirstLevel("About us") || []
+
 ---
 
 <Layout
-   title="Welcome to TCET Mumbai"
+sidebar={subLinks} 
+title="Welcome to TCET Mumbai"
    description="Thakur College of Engineering and Technology"
 >
    <main class="p-4 lg:p-16 flex flex-col">

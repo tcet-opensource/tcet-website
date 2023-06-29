@@ -1,5 +1,8 @@
 ---
 import Message from "../../components/About/Message/index.astro";
+import {getSubLinksFirstLevel} from "../../data/navlinks"
+
+const subLinks = getSubLinksFirstLevel("About us") || []
 
 import Layout from "../../layouts/Layout.astro";
 const data={
@@ -10,7 +13,8 @@ const data={
 }
 ---
 <Layout
-    title="Welcome to TCET Mumbai"
+sidebar={subLinks} 
+title="Welcome to TCET Mumbai"
     description="Thakur College of Engineering and Technology"
 >
     <main>

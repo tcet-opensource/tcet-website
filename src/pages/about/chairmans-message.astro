@@ -9,8 +9,13 @@ const data={
     name:"MR.V.K.SINGH",
     url:"../../about/chairman"
 }
+import {getSubLinksFirstLevel} from "../../data/navlinks"
+
+const subLinks = getSubLinksFirstLevel("About us") || []
+
 ---
 <Layout
+sidebar={subLinks} 
     title="Welcome to TCET Mumbai"
     description="Thakur College of Engineering and Technology"
 >

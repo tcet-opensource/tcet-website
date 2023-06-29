@@ -29,8 +29,9 @@ export const secondaryLinks: link[] = [
       { title: "Chariman's Message", link: "/about/charimans-message" },
       { title: "CEO's Message", link: "/about/CEOs-message" },
       { title: "Principle's Message", link: "/about/principle-message" },
-      { title: "Dean RnD Message", link: "/about/dean-RnD-message" },
       { title: "Dean SSW Message", link: "/about/dean-SSW-message" },
+      { title: "Dean RnD Message", link: "/about/dean-RnD-message" },
+      { title: "Dean ACD Message", link: "/about/dean-ACD-message" },
       { title: "Institutional Growth", link: "/about/institutional-growth" },
       { title: "Testimonials", link: "/about/testimonials" },
       {
