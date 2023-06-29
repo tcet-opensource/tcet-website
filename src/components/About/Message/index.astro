@@ -1,0 +1,26 @@
+---
+const { title, img, message, name } = Astro.props;
+// use localhost:3000/page to access all the links
+---
+
+<message class="inline-block px-5 py-4 text-justify">
+    <!-- <message class="main"> -->
+    <div
+        class="pt-2.5 pr-2.5 pl-2.5 font-normal font-title text-4xl leading-10 gap-10 tracking-tight">
+        {title}
+    </div>
+    <div class="pt-3 gap-4">
+        <div class="flex mx-auto w-72 h-120 pt-5 pr-5 pb-5 md:float-left">
+            <img class="rounded-lg" src={img} />
+        </div>
+        <div class="pt-3 p-1">
+            <p
+                class="text-base font-normal text-[#475467] first-letter:text-4xl first-letter:font-bold first-letter:text-[#475467] first-letter:mr-1 md:text-justify">
+                {message}
+            </p>
+            <p class="pt-2 text-xl font-[600] text-[#101828]">
+                {name}
+            </p>
+        </div>
+    </div>
+</message>
