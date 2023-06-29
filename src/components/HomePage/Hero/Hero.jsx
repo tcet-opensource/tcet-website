@@ -114,6 +114,7 @@ const App = () => {
                       height="100%" 
                       src="https://www.youtube.com/embed/EPEbkGYBw3s" 
                       title="YouTube video player" 
+                      frameBorder="0" 
                       allowFullScreen
                       ref={iframeRef}>        
             </iframe>

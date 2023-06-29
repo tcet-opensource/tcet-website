@@ -1,0 +1,25 @@
+---
+import Message from "../../components/About/Message/index.astro";
+
+import Layout from "../../layouts/Layout.astro";
+const data={
+    title:"Dean's (Student & Staff Welfare) Message",
+    img:"/About/Message/deanssd.png",
+    message:"A journey to a thousand miles begins with a single step It is certainly a great pleasure to welcome you to Thakur College of Engineering and Technology. I would appreciate your wise decision of joining our institution to be an engineer who believes to change the world for the betterment of human beings. The educational qualification of students should be skilled enough to suit the high requirements of the numerous technology-based industry. As Technical Education is the backbone of every nation and is the steppingstone for a country to move into the niche of a developed nation. TCET has over the years significantly bolstered the quality and availability of technical education, doubling the employment rate of graduates who are now better suited to the needs of the Indian industry.Extracurricular and co-curricular activities strengthen the process of learning by teaching students the value of hard work, discipline, and fair play. These activities are conducted by the TCET student development and welfare team, 7 professional bodies, 3 social bodies and 2 clubs. These student bodies offer a plethora of activities and students have the flexibility to select, participate, learn, and grow as per their interests. We have a formal platform with 100 activity points to consolidate all the activities that students are participating in.The state-of-the-art auditorium and seminar halls have played host to numerous Curricular, co-curricular, Extracurricular, and cultural activities. We strongly encourage students to participate in these activities and showcase their talent. Some of the major events conducted in TCET are Zephyr - A technical fest, T-Spark - An Intra College sports event, inertia - Inter College sports event, Reflex-An E-Sports inter college event, Progressive India-A debate, and presentation competition on technology vision 2035, Sojourn - An Annual Cultural event, Alumni Meet etc. I welcome you to enjoy academic learning with professional development and explore strategic fit in the corporate world for yourself. I strongly believe that you will experience the best ambience in our institute for your fruitful journey in the world of technology..",
+    name:"DR. LOCHAN JOLLY"
+}
+---
+<Layout
+    title="Welcome to TCET Mumbai"
+    description="Thakur College of Engineering and Technology"
+>
+    <main>
+        <Message
+            title={data.title}
+            img={data.img}
+            ,
+            message={data.message}
+            name={data.name}
+        />
+    </main>
+</Layout>

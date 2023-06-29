@@ -13,7 +13,7 @@
   },
   {
     image: "image 4.svg",
-    text: "Accredited Programmes by National Board of Accreditation, New Delhi",
+    text: "Approved by All India Council for Technical Education",
   },
 ];
 

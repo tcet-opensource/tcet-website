@@ -1,14 +1,14 @@
 ---
 import type { link } from "../../env";
-import Accordian from "./Accordian";
+import Accordian from "./SecondaryNav/Accordian";
 import MobileNav from "./MobileNav";
 import { primaryLinks, secondaryLinks } from "../../data/navlinks";
 
 ---
 
-<header class="mb-4 lg:mb-8 xl:mb-10 ">
+<header class="mb-4 lg:mb-8 xl:mb-10">
   <div
-    class="bg-white gap-2 py-4 flex items-center px-4 xl:px-8 2xl:px-12 border-b "
+    class="bg-white gap-2 py-4 flex items-center px-4 xl:px-8 2xl:px-12 border-b"
   >
     <div class="space-y-2 md:flex md:mr-4">
       <a href="/">
@@ -69,9 +69,8 @@ import { primaryLinks, secondaryLinks } from "../../data/navlinks";
         </svg>
 
         <span class="text-xs xl:text-sm text-slate-900 hover:underline"
-          >thakureducation.org</span >
-       
-       
+          >thakureducation.org</span
+        >
       </a>
       {
         primaryLinks.map((p) => (
@@ -94,16 +93,62 @@ import { primaryLinks, secondaryLinks } from "../../data/navlinks";
       </a>
     </nav>
   </div>
-  <div class="hidden lg:flex text-slate-800 justify-evenly py-2 border-b">
-    {
-      secondaryLinks.map((s) => (
-        <span class="flex items-center gap-2">
-          {!s.subLinks && <a class="text-xs xl:text-sm   hover:underline" href={s.subLinks?"":s.link}>
-            {s.title}
-          </a>}
-          {s.subLinks && <Accordian title={s.title} client:load links={s.subLinks} />}
-        </span>
-      ))
-    }
+  <div id="secondary-header">
+    <div
+      class="hidden lg:flex text-slate-800 justify-evenly border-b relative"
+    >
+      {
+        secondaryLinks.map((s) => (
+          <span class="flex items-center gap-2">
+            {(!s.leftPanel || !s.rightPanel) && (
+              <a
+                class="text-xs xl:text-sm   hover:underline"
+                href={s.leftPanel || s.rightPanel ? "" : s.link}
+              >
+                {s.title}
+              </a>
+            )}
+            {s.leftPanel && s.rightPanel && (
+              <Accordian
+                client:load
+                title={s.title}
+                leftpanel={s.leftPanel}
+                rightpanel={s.rightPanel}
+              />
+            )}
+          </span>
+        ))
+      }
+    </div>
   </div>
 </header>
+
+<!-- code for sticky secondary navbar -->
+<script>
+  let header = document.getElementById("secondary-header");
+  if (header != null) {
+    window.onscroll = function () {
+      stickHeaderToTop();
+    };
+
+    var headerOffSet = header.offsetTop;
+
+    function stickHeaderToTop() {
+      if (window.scrollY > headerOffSet && header != null) {
+        header.classList.add("fixed");
+        header.classList.add("top-0");
+        header.classList.add("w-screen");
+        header.classList.add("bg-white");
+        header.classList.add("z-20");
+      } else {
+        if (header != null) {
+          header.classList.remove("fixed");
+          header.classList.remove("top-0");
+          header.classList.remove("w-screen");
+          header.classList.remove("bg-white");
+          header.classList.remove("z-20");
+        }
+      }
+    }
+  }
+</script>

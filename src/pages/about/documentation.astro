@@ -1,0 +1,82 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import {
+   NIRFData,
+   InstitutionalActivitesData,
+   EducationalSurveyData,
+} from "../../components/About/Documention/data";
+import Document from "../../components/About/Documention/Document";
+---
+
+<Layout
+   title="Welcome to TCET Mumbai"
+   description="Thakur College of Engineering and Technology"
+>
+   <main class="p-4 lg:p-16 flex flex-col">
+      <div>
+         <p class="font-semibold text-lg text-[#667085] mx-7 mb-5 uppercase">
+            NIRF DATA
+         </p>
+
+         <div
+            class="h-fit border rounded-lg border-blue-gray-200 shadow-md p-4 gap-4 w-auto mx-6 px-2 grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 justify-between items-center"
+         >
+            {
+               NIRFData.map((data) => (
+                  <div class=" hover:bg-[#fbf2dd] bg-[#FFFCF5] text-[#DC6803] border border-solid border-[#FEC84B] rounded-lg">
+                     <Document
+                        title={data.year}
+                        url={data.url}
+                        img="/About/Documentation/orange.svg"
+                     />
+                  </div>
+               ))
+            }
+         </div>
+      </div>
+      <div class="mt-7">
+         <p class="font-semibold text-lg text-[#667085] mx-7 mb-5 uppercase">
+            Institutional Activities
+         </p>
+
+         <div
+            class="border rounded-lg border-blue-gray-200 shadow-md p-4 gap-4 w-auto mx-6 px-2 grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 justify-between items-center"
+         >
+            {
+               InstitutionalActivitesData.map((data) => (
+                  <div class="hover:bg-[#cee8d8] bg-[#ECFDF3] text-[#039855] border border-solid border-[#6CE9A6] rounded-lg ">
+                     <Document
+                        title={data.title}
+                        url={data.url}
+                        img="/About/Documentation/green.svg"
+                     />
+                  </div>
+               ))
+            }
+         </div>
+      </div>
+      <div class="mt-7">
+         <p
+            class="font-semibold text-lg text-[#667085] mx-7 mb-5 -mx uppercase"
+         >
+            Educational Survey
+         </p>
+
+         <div
+            class="h-fit border rounded-lg border-blue-gray-200 shadow-md p-4 gap-10 w-auto mx-6 px-2 grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 justify-between items-center"
+         >
+            {
+               EducationalSurveyData.map((data) => (
+                  <div class="hover:bg-[#deecfa] bg-[#F5FAFF] text-[#2E90FA] border border-solid border-[#84CAFF] rounded-lg">
+                     <Document
+                        title={data.title}
+                        url={data.url}
+                        img="/About/Documentation/blue.svg"
+                     />
+                  </div>
+               ))
+            }
+         </div>
+      </div>
+   </main>
+</Layout>

@@ -13,17 +13,29 @@ export type StaffTNP = {
   staffPhoto: string;
   experties: string;
 };
-  
+
+export type leftPanel = {
+  title: string;
+  subTitle: string;
+  logo: string;
+  link: string;
+}
+
+export type rightPanel= {
+  heading: string;
+  links: link[];
+}
+
 export type link = {
   title: string;
   link: string;
-  icon?: string;
-  description?: string;
   subLinks?: link[];
   aside?: {
     title: string;
     links: link[];
   }
+  leftPanel?: leftPanel[];
+  rightPanel?: rightPanel;
 }
 
 export type imageLink =  {
