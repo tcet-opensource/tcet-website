@@ -1,0 +1,7 @@
+
+.file[data-color]{
+    background-color: attr(data-color);
+    color: attr(data-color);
+    border-color: attr(data-color);
+    
+}

@@ -51,7 +51,7 @@ export default function AchievementSwiper() {
     <div className="swiper-prev flex items-center justify-center shadow-md shadow-[0px 4px 8px -2px rgba(16, 24, 40, 0.1), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);] absolute left-2 bg-white z-10 top-1/2 w-8 h-8 rounded-full">
     <img src="/misc/chevron-left.svg" alt="prev-image-btn" />
     </div>
-    <div className="swiper-next absolute flex items-center justify-center shadw-md shadow-[0px 4px 8px -2px rgba(16, 24, 40, 0.1), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);] absolute right-2 bg-white z-10 top-1/2 w-8 h-8 rounded-full">
+    <div className="swiper-next absolute flex items-center justify-center shadow-md shadow-[0px 4px 8px -2px rgba(16, 24, 40, 0.1), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);] absolute right-2 bg-white z-10 top-1/2 w-8 h-8 rounded-full">
         <img src="/misc/chevron-right.svg" alt="next-image-btn" />
     </div>
     </div>
