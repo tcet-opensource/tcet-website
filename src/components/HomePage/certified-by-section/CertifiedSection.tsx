@@ -1,4 +1,3 @@
-
 interface CertiProps {
   img: any;
   text: string;
