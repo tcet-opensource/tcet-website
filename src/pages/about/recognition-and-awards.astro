@@ -1,0 +1,199 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CertifiedSection from "../../components/HomePage/certified-by-section/CertifiedSection";
+import { CertifiedSectionData } from "../../components/HomePage/certified-by-section/data";
+
+const quality = [
+    "Development of intellectual skills and knowledge",
+    "Contribute to society through productive and satisfying engineering careers",
+    "Install commitment to sustainable development",
+    "Perform world class research to advance the frontiers of knowledge.",
+    "An opportunity to lifelong learning and practice",
+    "Extend expertise towards improvement in the quality of technical education",
+];
+
+const policy = [
+    "We, the Staff, Faculty and the Management of Thakur College of Engineering and Technology, are committed to provide state-ofthe- art infrastructure and facilities, conducive academic environment to deliver Quality Technical Education to our students.",
+    "We shall work as a team and interact with the students in pro-active manner to achieve our Institutional Quality Objectives and fulfill all academic and regulatory requirements to continually enhance the satisfaction of our students.",
+];
+
+const achievement = [
+    "Institute is NAAC accredited with grade “A” in 1 Cycle for 5 years w.e.f. 30/10/2017. Undergraduate Programs of E&TC IT, COMP, and ELEX are accredited by National Board of Accreditation, New Delhi w.e.f. 1.7.2019 for 3 years which is extended upto 30.6.2022 in the current academic year",
+    "Institute is ranked among top 200 colleges in the country where the institute is ranked 193 in NIRF India Ranking 2019 in th th Engineering category and 68th & 78th in All India Rank by Outlook survey published in June 2019 & May 2018 respectively",
+];
+
+const survey = [
+    {
+        year: 2020,
+        text: `Institute- "Platinum" (High) Category`,
+    },
+    {
+        year: 2019,
+        text: `Institute- "Platinum" (High) Category`,
+    },
+    {
+        year: 2018,
+        text: `Institute- "Platinum" (High) Category`,
+    },
+    {
+        year: 2017,
+        text: `Institute- "Platinum" (High) Category`,
+    },
+    {
+        year: 2016,
+        text: `Institute- "Platinum" (High) Category`,
+    },
+    {
+        year: 2015,
+        text: `CMPN-IT - "Platinum" (High) category`,
+    },
+    {
+        year: 2014,
+        text: `2014: CMPN-IT & EXTC-ETRX- "Platinum" (High) category`,
+    },
+    {
+        year: 2013,
+        text: `CMPN-IT - "3" (High) category, EXTC & ETRX- "2" (Medium) category`,
+    },
+];
+
+const survey_pts = [
+    "Institute has been Certified for ISO 9001:2000 in A.Y. 2005-06 and currently upgraded to ISO: 9001:2015 in A.Y.2017-18",
+    "Institute has received Asia Pacific Quality Organization (APQO) World Class Global Performance Excellence Award 2016 on 21 November 2016 in New Zealand for Best in Class Award in Education Category.",
+    "Recipient of IMC Ramakrishna Bajaj National Quality Award (RBNQA) in 2015 for Performance Excellence and Commendation certificate in 2013.",
+    "Best Innovative & Performing Engineering College NEA (National Maharashtra Education Award) in A.Y.2015-16 organized at UOM",
+];
+---
+
+<Layout title="Welcome to TCET Mumbai" description='Thakur College of Engineering and Technology' >
+	<main class="p-4 lg:p-16 space-y-4 lg:space-y-10">
+			<h1 class="font-title text-4xl ">Recognition & Awards</h1>
+			<section
+				class="text-right text-base border-r-4 border-[#667085] p-4 -ml-2"
+				style={{
+					backgroundImage:
+						"radial-gradient(61.56% 85.33% at 50% 100%, rgba(185, 221, 255, 0.7) 0%, rgba(185, 221, 255, 0.08) 100%)",
+				}}
+			>
+				<p class="pr-2">“We shape our institution and our institution shapes us”</p>
+				<p class="text-[#667085] pr-2">~Winston Churchill.</p>
+		 
+			</section>
+			<p class="text-[#667085] text-base pt-4">
+				TCET always believes in quality education 'Quality is not an act but a
+				habit' is a maxim that Thakur College of Engineering & Technology (TCET)
+				has identified with right from its inception in the academic year
+				2001-02. Today institutes have well-designed and well-executed systems
+				and processes, maintaining transparency, accountability and integrity.
+				Quality of product and services offered to the students (our customer)
+				is second to none in the education sector particularly professional
+				technical education.
+			</p>
+		
+			<section
+				class="h-full w-full flex flex-wrap m-auto items-start justify-center mt-6"
+			>
+				{
+					CertifiedSectionData.map((ele, index) => (
+						<div class="lg:border-r-2 md:border-r-2 md:last:border-r-0 lg:last:border-r-0">
+							<CertifiedSection text={ele.text} img={ele.image} />
+						</div>
+					))
+				}
+			</section>
+		
+			<section class="">
+				<h1 class="text-2xl font-semibold pb-2 text-[#101828]">
+					Quality in Education leads to
+				</h1>
+				<p class="text-[#667085] text-base">
+					At aliquam et porttitor pellentesque ullamcorper maecenas enim
+					purus. Aliquam mattis suspendisse aliquet posuere mauris ac.
+				</p>
+				<div class="grid grid-cols-1 lg:grid-cols-3">
+					{
+						quality.map((el) => {
+							return (
+								<div class="p-2">
+									<img
+										class="pb-2"
+										src="/About/RecognitionAwards/Featured.svg"
+										alt=""
+									/>
+									<p class="text-base">{el}</p>
+								</div>
+							);
+						})
+					}
+				</div>
+			</section>
+			<section class="">
+				<h1 class="text-2xl font-semibold pb-2 text-[#101828]">Quality Policy</h1>
+				<ul class="list-disc pl-5 text-[#667085] text-base">
+					{
+						policy.map((el) => {
+							return <li>{el}</li>;
+						})
+					}
+				</ul>
+			</section>
+			<section class="">
+				<h1 class="text-2xl font-semibold pb-2 text-[#101828]">
+					TCET Achievements:A Mark of Quality Education
+				</h1>
+				<ul class="list-disc pl-5 text-[#667085] text-base">
+					{
+						achievement.map((el) => {
+							return <li>{el}</li>;
+						})
+					}
+				</ul>
+			</section>
+			<section class="">
+				<h1 class="text-2xl font-semibold pb-2 text-[#101828]">AICTE CII Survey</h1>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+					{
+						survey.map((el) => {
+							return (
+								<div class="flex flex-cols p-4 border rounded-xl">
+									<img
+										class="absolute pr-4 "
+										src="/About/RecognitionAwards/Frame.svg"
+										alt=""
+									/>
+									<div class="text-base pl-12">
+										<p class="w-fit bg-[#F2F4F7] p-1 px-2 rounded-2xl text-base">
+											{el.year}
+										</p>
+										<p>{el.text}</p>
+									</div>
+								</div>
+							);
+						})
+					}
+				</div>
+				<ul class="list-disc pl-5 text-[#667085] pt-2 text-base">
+					{
+						survey_pts.map((el) => {
+							return <li>{el}</li>;
+						})
+					}
+				</ul>
+			</section>
+			<section
+				class="text-center p-4"
+				style={{
+					backgroundImage:
+						"radial-gradient(61.56% 85.33% at 50% 100%, rgba(185, 221, 255, 0.7) 0%, rgba(185, 221, 255, 0.08) 100%)",
+				}}
+			>
+				<p class="text-[#667085]">
+					<span class="italic text-black"
+						>“Quality can never be the destination but will always remain a
+						journey”</span
+					> - In the time to come the institute will strive to bring many more
+					such glories through the continuous journey of quality education.
+				</p>
+			</section>
+	</main>
+</Layout>

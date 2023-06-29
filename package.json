@@ -17,14 +17,17 @@
     "@material-tailwind/react": "^2.0.2",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
-    "astro": "^2.6.0",
+    "astro": "^2.6.4",
     "astro-robots-txt": "^0.5.0",
     "astro-seo": "^0.7.4",
     "react": "^18.0.0",
     "react-countup": "^6.4.2",
     "react-dom": "^18.0.0",
-    "swiper": "^9.4.0",
+    "swiper": "^9.4.1",
     "tailwindcss": "^3.0.24",
     "usehooks-ts": "^2.9.1"
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/tcet-opensource/tcet-website.git",
+  "license": "MIT"
 }
