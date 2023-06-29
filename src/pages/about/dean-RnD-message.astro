@@ -1,0 +1,21 @@
+---
+import Message from "../../components/About/Message/index.astro";
+
+import Header from "../../components/Header/index.astro";
+import Footer from "../../components/Footer/index.astro";
+const data={
+    title:"Dean's (R&D) Message",
+    img:"/About/Message/deanrnd.png",
+    message:"Thakur College of Engineering and Technology has continually endeavoured to promote an R&D culture comparable to that of prominent Institutes around the world. Regular workshops, conferences, seminars, industrial exchanges, lectures on intellectual property awareness, and other events are regularly attended by our employees and students. The college has included RBL in the undergraduate curriculum, giving students a formal setting to carry out their research plans under the qualified guidance of professionals for better chances. Faculty members have received research support from the University of Mumbai, the AICTE, the DST, and other financial agencies.To aid with research and project development, we have a central library with reliable e-learning resources. The R&D cell also has a bank of electronic components that students can use to borrow items for their projects. Students from all disciplines work on various projects. Where they work on a range of technologies, including, among others, phonetics, the hyperloop, balloon satellites, aerospace technology, hybrid engines, and open-source software development High-calibre publications that contain the findings of these research activities are published. Our faculty and students have filed 40 patents. 14 patents granted by the Australian, German, and Indian Patent offices. We also acquired 13 copyrights and 4 trademarks. Students regularly compete in project competitions, winning accolades, recognition, awards, and fellowships through organisations like the Smart India Hackathon, Avishkar, and others. Candidates for the PhD (Technology) in computer engineering, information technology, or electronics & telecommunication engineering may use the institute as a research hub. Various initiatives under R&D helping institute to develop the strong base for research oriented internship and consultancy.Best of luck to all aspiring students for their career in engineering and technology!!!",
+    name:"Dr. Vinitkumar Jayaprakash Dongre"
+}
+---
+    <Header />
+    <Message
+    title={data.title}
+    img={data.img},
+    message={data.message}
+    name={data.name}
+/>
+    <!-- <slot /> -->
+    <Footer />

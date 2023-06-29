@@ -1,0 +1,11 @@
+---
+const firstImages = await Astro.glob('../../../../public/LifeAtTCET/Home/FirstCards/*.png');
+const secondImages = await Astro.glob('../../../../public/LifeAtTCET/Home/SecondCards/*.png');
+---
+<h1 class="font-title sm:text-center text-4xl font-normal leading-8 tracking-[-0.02em] text-[#101828]">Life@TCET</h1>
+<div class="flex flex-wrap gap-4 sm:justify-center">
+    {firstImages.map((img) => <img class="border shadow-lg p-3 rounded-md border-solid border-[#E2E2E2]" src={img.default.src} alt=""/>)}
+</div>
+<div class="flex flex-wrap gap-4 sm:justify-center">
+    {secondImages.map((img) => <img class="float-left border shadow-lg p-3 rounded-md border-solid border-[#E2E2E2]" src={img.default.src} alt=""/>)}
+</div>
