@@ -1,0 +1,77 @@
+---
+import type { link } from "../../env";
+export interface Props {
+    links: link[];
+}
+
+let { links } = Astro.props;
+// links = links.map((links) => {
+//     const { link } = links;
+//     if (link[link.length - 1] !== "/") {
+//         links.link = link + "/";
+//     }
+
+//     return links;
+// });
+
+---
+
+<aside
+    id="sidebar"
+    class="fixed md:sticky z-10  h-max bg-white col-span-3  p-4 md:p-6 md:m-4 -left-[57%] md:left-0 md:top-6 border border-gray-200 rounded-md shadow-[#1018280F] shadow-lg sm:shadow-md duration-500"
+>
+    <div
+        id="sidebar-toggle"
+        class="md:hidden bg-white aspect-square h-8 absolute -right-5 top-3 border flex justify-center items-center border-gray-200 rounded-md cursor-pointer"
+    >
+        <img
+            id="sidebar-btn"
+            src="/misc/chevron-double-right.svg"
+            class="object-contain object-center transition-transform duration-500"
+        />
+    </div>
+    <div class="flex flex-col gap-2 h-[100%] max-h-[45rem] overflow-y-auto overflow-x-hidden " >
+        {
+            links.map((links) => (
+                <a
+                    href={links.link}
+                    class={` text-base font-medium rounded-lg font-sans ${
+                        (Astro.url.pathname === links.link) || (Astro.url.pathname+"/" === links.link)
+                            ? "bg-gray-100  text-blue-gray-900"
+                            : "text-blue-gray-600"
+                    }`}
+                >
+                    <div class="py-1 px-2 rounded-md hover:bg-gray-100">
+                        {links.title}
+                    </div>
+                </a>
+            ))
+        }
+    </div>
+</aside>
+
+<script>
+    const sidebar = document.getElementById("sidebar");
+    const sidebarToggle = document.getElementById("sidebar-toggle");
+    const sidebarBtn = document.getElementById("sidebar-btn");
+
+    const onClickOutside = (element:HTMLElement, callback:() => void) => {
+        document.addEventListener("click", (event) => {
+            if (!element.contains(event.target as Node)) callback();
+        });
+    };
+    
+    sidebar?.addEventListener("click", (e) => {
+        e.stopPropagation();
+        sidebar?.classList.toggle("-left-[57%]");
+        sidebar?.classList.toggle("-left-1");
+        sidebarBtn?.classList.toggle("-rotate-180");
+        sidebar?.classList.replace("sticky", "fixed");
+    });
+
+    sidebar && onClickOutside(sidebar, () => {
+        sidebar?.classList.replace("-left-1", "-left-[57%]");
+        sidebarBtn?.classList.remove("-rotate-180");
+        sidebar?.classList.replace("sticky", "fixed");
+    })
+</script>

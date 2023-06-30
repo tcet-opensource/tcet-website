@@ -1,0 +1,31 @@
+---
+import Message from "../../components/About/Message/index.astro";
+import Layout from "../../layouts/Layout.astro";
+const data = {
+    title: "CEO's Message",
+    img: "/About/Message/CEO.png",
+    message:
+        " 'You have got to find what you like. Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to like what you do.' - Steve Jobs. Thakur College of Engineering & Technology (TCET) creates an everlasting image in the mind of students and inspires them to emulate what they have just been exposed to in the classroom. Certainly, our institute will unveil the dimension to touch professional excellence in the most memorable way.Our society is evolving rapidly in many ways, which will profoundly impact educational institutions' roles. In this changing world, knowledge will remain an essential resource throughout the globe. The dynamics of the ever-changing world urge us as academicians to give the right incentive for making life-long learners with creativity, persuasion, collaboration, problem-solving, adaptability and emotional intelligence out of students. In our institution, we strongly integrate social obligations with the need to comprehend cutting-edge technologies and promote ethical reasoning into the learning agenda in a comprehensive way. This ensures to offer an intellectually challenging and rewarding atmosphere.TCET has achieved an incredible mark in the technical education arena ever since its inception. It has been working relentlessly towards providing the highest quality of professional education to students with the objective of equipping them for a global career. We provide a platform to fulfil your most-cherished dreams and hopes. Our focus on continuous development, emphasizing quality teaching and a sense of belongingness of the qualified and experienced faculty has brought laurels to our credit. Self-reliance and self-sufficiency are the Hallmarks of our education system. To carve a niche in your ambitious plans is our commitment.I am sure, a student aspiring to seek admission in our prestigious institute is bound to meet success. I wish you all a bright and prosperous future.",
+    name: "MR.KARAN SINGH",
+};
+import {getSubLinksFirstLevel} from "../../data/navlinks"
+
+const subLinks = getSubLinksFirstLevel("About us") || []
+
+---
+
+<Layout
+sidebar={subLinks} 
+    title="Welcome to TCET Mumbai"
+    description="Thakur College of Engineering and Technology"
+>
+    <main>
+        <Message
+            title={data.title}
+            img={data.img}
+            ,
+            message={data.message}
+            name={data.name}
+        />
+    </main>
+</Layout>

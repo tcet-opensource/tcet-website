@@ -5,15 +5,16 @@ import CertifiedSection from '../components/HomePage/certified-by-section/index.
 import MagazineSection from '../components/HomePage/MagazineSection/index.astro';
 import Hero from '../components/HomePage/Hero/index.astro';
 import About from '../components/HomePage/About/index.astro';
-import Counter from "../components/HomePage/Counter.jsx"
-import Events from "../components/HomePage/Events.jsx"
-import Awards from "../components/HomePage/Awards.jsx"
-
+import Counter from "../components/HomePage/Counter"
+import Events from "../components/HomePage/Events"
+import Awards from "../components/HomePage/Awards"
+import Notification from "../components/Notification/Notification"
 ---
 
 <Layout title="Welcome to TCET Mumbai" description='Thakur College of Engineering and Technology' >
-	<main>
+	<main class="flex-1 box-border" >
 		<Hero />
+		<Notification client:load />
 		<CertifiedSection/>
 		<About />
 		<Counter client:only="react"/>

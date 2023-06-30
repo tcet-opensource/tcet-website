@@ -1,0 +1,103 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import {getSubLinksFirstLevel} from "../../data/navlinks"
+
+const subLinks = getSubLinksFirstLevel("Life @TCET") || []
+
+const tableRows = [
+  {
+    c1: "1",
+    c2: "2012 - 2013",
+    c3: "Electoworks-National level Electronics competition, SPIT, Mumbai",
+    c4: "1",
+    c5: "National",
+  },
+  {
+    c1: "2",
+    c2: "2012 - 2013",
+    c3: "Xavier MUN",
+    c4: "2",
+    c5: "National",
+  },
+  {
+    c1: "3",
+    c2: "2012 - 2013",
+    c3: "TCET MUN",
+    c4: "2",
+    c5: "Inter-College",
+  },
+  {
+    c1: "4",
+    c2: "2012 - 2013",
+    c3: "Mumbai MUN",
+    c4: "3",
+    c5: "National",
+  },
+  {
+    c1: "5",
+    c2: "2012 - 2013",
+    c3: "Xavier MUN",
+    c4: "3",
+    c5: "Inter-College",
+  },
+  {
+    c1: "6",
+    c2: "2012 - 2013",
+    c3: "Xavier MUN",
+    c4: "3",
+    c5: "Inter-College",
+  },
+  {
+    c1: "7",
+    c2: "2012 - 2013",
+    c3: "Xavier MUN",
+    c4: "3",
+    c5: "National",
+  },
+];
+---
+
+<astro>
+  <style>
+    table,
+    table th,
+    table td {
+      border: 1px solid #d1e9ff;
+    }
+  </style>
+</astro>
+<Layout
+sidebar={subLinks}
+  title='Welcome to TCET Mumbai'
+  description='thakur College of Engineering and Technology'
+>
+<div class="p-4   ">
+  <div class="text-4xl mb-8 font-title">Achievements</div>
+  <div class='overflow-x-auto '>
+    <table class='table-auto rounded-lg text-blue-900 min-w-[730px] md:min-w-full text-sm'>
+      <thead class='th text-black font-semibold'>
+        <tr>
+          <th class='py-2 md:px-3'>Sr. No</th>
+          <th class='py-2 md:px-3'>Year</th>
+          <th class='py-2 md:px-3'>Name of Event</th>
+          <th class='py-2 md:px-3'>Position</th>
+          <th class='py-2 md:px-3'>Type of Event</th>
+        </tr>
+      </thead>
+      <body>
+        {
+          tableRows.map((t) => (
+            <tr class='td text-center odd:bg-[#EFF8FF]'>
+              <td class='px-2 py-3'>{t.c1}</td>
+              <td>{t.c2}</td>
+              <td>{t.c3}</td>
+              <td>{t.c4}</td>
+              <td>{t.c5}</td>
+            </tr>
+          ))
+        }
+      </body>
+    </table>
+  </div>
+  </div>
+</Layout>

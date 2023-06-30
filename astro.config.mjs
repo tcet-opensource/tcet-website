@@ -13,7 +13,7 @@ export default defineConfig({
   site: "https://test.tcetmumbai.in",
   vite: {
     ssr: {
-      noExternal: [/^swiper\/*/,/^react-fast-marquee\/*/,/^usehooks-ts\/*/,/^react-countup\/*/,/^@material-tailwind\/*/  ]
+      noExternal: [/^swiper\/*/, /^react-fast-marquee\/*/, /^usehooks-ts\/*/, /^react-countup\/*/, /^@material-tailwind\/*/]
     }
   }
 });
