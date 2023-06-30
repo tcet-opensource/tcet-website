@@ -32,6 +32,7 @@ const Notification = () => {
       {isOpen ? (
         <div
           className="xl:w-96 lg:w-80 md:w-72 sm:w-64 w-4/5 fixed bottom-20 md:top-56 z-10 bg-white right-0 mx-8 rounded-lg hover:drop-shadow-xl
+          h-max
         "
         >
           <div className="flex flex-row justify-between px-6 py-3 border border-slate-600">
