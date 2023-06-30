@@ -1,23 +1,8 @@
 ---
 import type { link } from "../../env";
 import Accordian from "./SecondaryNav/Accordian";
-import MobileNav from "./SecondaryNav/MobileNav";
-import { secondaryLinks } from "./SecondaryNav/secondaryLinks";
-
-const primaryLinks: link[] = [
-  {
-    title: "ERP",
-    link: "http://erp.tcetmumbai.in/",
-  },
-  {
-    title: "Alumni",
-    link: "https://tcetmumbai.in/aboutAlumni.html",
-  },
-  {
-    title: "Careers",
-    link: "https://tcetmumbai.in/careers.html",
-  },
-];
+import MobileNav from "./MobileNav";
+import { primaryLinks, secondaryLinks } from "../../data/navlinks";
 
 ---
 
@@ -98,14 +83,14 @@ const primaryLinks: link[] = [
         ))
       }
 
-      <a href="https://thakureducation.org/">
+      <!-- <a href="https://thakureducation.org/">
         <img
           src="/Images/Thakur Trust.png"
           alt="Thakur Trust"
           srcset=""
           class="hidden lg:block w-20"
         />
-      </a>
+      </a> -->
     </nav>
   </div>
   <div id="secondary-header">

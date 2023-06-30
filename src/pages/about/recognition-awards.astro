@@ -2,6 +2,9 @@
 import Layout from '../../layouts/Layout.astro';
 import CertifiedSection from "../../components/HomePage/certified-by-section/CertifiedSection";
 import { CertifiedSectionData } from "../../components/HomePage/certified-by-section/data";
+import {getSubLinksFirstLevel} from "../../data/navlinks"
+
+const subLinks = getSubLinksFirstLevel("About us") || []
 
 const quality = [
     "Development of intellectual skills and knowledge",
@@ -65,7 +68,9 @@ const survey_pts = [
 ];
 ---
 
-<Layout title="Welcome to TCET Mumbai" description='Thakur College of Engineering and Technology' >
+<Layout
+sidebar={subLinks} 
+ title="Welcome to TCET Mumbai" description='Thakur College of Engineering and Technology' >
 	<main class="p-4 lg:p-16 space-y-4 lg:space-y-10">
 			<h1 class="font-title text-4xl ">Recognition & Awards</h1>
 			<section

@@ -1,5 +1,8 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import {getSubLinksFirstLevel} from "../../data/navlinks"
+
+const subLinks = getSubLinksFirstLevel("Life @TCET") || []
 
 const tableRows = [
   {
@@ -64,10 +67,11 @@ const tableRows = [
   </style>
 </astro>
 <Layout
+sidebar={subLinks}
   title='Welcome to TCET Mumbai'
   description='thakur College of Engineering and Technology'
 >
-<div class="p-4 lg:p-16  ">
+<div class="p-4   ">
   <div class="text-4xl mb-8 font-title">Achievements</div>
   <div class='overflow-x-auto '>
     <table class='table-auto rounded-lg text-blue-900 min-w-[730px] md:min-w-full text-sm'>

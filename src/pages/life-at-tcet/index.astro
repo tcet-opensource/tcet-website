@@ -3,9 +3,13 @@ import Layout from '../../layouts/Layout.astro'
 import FirstSection from "../../components/LifeAtTCET/Home/FirstSection.astro";
 import SecondSection from "../../components/LifeAtTCET/Home/SecondSection.astro";
 import ThirdSection from "../../components/LifeAtTCET/Home/ThirdSection.astro";
+import {getSubLinksFirstLevel} from "../../data/navlinks"
+
+const subLinks = getSubLinksFirstLevel("Life @TCET") || []
+
 ---
-<Layout title="Life@TCET" description='Life@TCET-Home page'>
-    <div class=" flex flex-col gap-4 p-4 lg:p-16 rounded-lg">
+<Layout sidebar={subLinks} title="Life@TCET" description='Life@TCET-Home page'>
+    <div class=" flex flex-col gap-4 p-4 rounded-lg">
         <FirstSection />
         <SecondSection />
         <ThirdSection />

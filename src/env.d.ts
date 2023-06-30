@@ -5,7 +5,7 @@ export type TestimonialType = {
     photo: string;
     name: string;
     position: string;
-  }
+}
 
 export type StaffTNP = {
   StaffName: string;
@@ -28,8 +28,12 @@ export type rightPanel= {
 
 export type link = {
   title: string;
-  link?: string;
+  link: string;
   subLinks?: link[];
+  aside?: {
+    title: string;
+    links: link[];
+  }
   leftPanel?: leftPanel[];
   rightPanel?: rightPanel;
 }
