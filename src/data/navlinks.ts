@@ -143,10 +143,27 @@ export const secondaryLinks: link[] = [
       {
         title: "Life @TCET",
         link:"/life-at-tcet/"        
-      }, {
+      }, 
+      {
         title: "Achievements",
         link: "/life-at-tcet/achievements/"
-      }
+      },
+      {
+        title: "SORT & Literary Club",
+        link: "https://sort.tcetmumbai.in/"
+      },
+      {
+        title: "ISTE",
+        link: "https://iste.tcetmumbai.in/"
+      },
+      {
+        title: "IEEE",
+        link: "https://ieee.tcetmumbai.in/"
+      },
+      {
+        title: "IETE",
+        link: "https://iete.tcetmumbai.in/"
+      },
     ]
   },
   {
