@@ -31,10 +31,11 @@ const Notification = () => {
     <div>
       {isOpen ? (
         <div
-          className="xl:w-96 lg:w-80 md:w-72 sm:w-64 w-4/5 fixed top-56 z-10 bg-white right-0 mx-8 rounded-lg hover:drop-shadow-xl
+          className="xl:w-96 lg:w-80 md:w-72 sm:w-64 w-4/5 fixed bottom-20 md:top-56 z-10 bg-white right-0 mx-8 rounded-lg hover:drop-shadow-xl
+          h-max
         "
         >
-          <div className="flex flex-row justify-between px-6 py-3">
+          <div className="flex flex-row justify-between px-6 py-3 border border-slate-600">
             <div className="font-semibold">Notification</div>
             <button onClick={onClickClose}>
               <svg
@@ -65,11 +66,11 @@ const Notification = () => {
           </div>
         </div>
       ) : (
-        <div className="fixed top-56 z-10 right-0 mx-8 rounded-full">
+        <div className="fixed bottom-20 md:top-56 z-10 -right-5 mx-8 rounded-full">
           <div className="px-3">
             <button
               onClick={onClickOpen}
-              className="bg-white p-3 rounded-full shadow-xl hover:drop-shadow-xl hover:shadow-2xl hover:bg-gray-200"
+              className="bg-white p-3 border border-slate-600 rounded-full shadow-xl hover:drop-shadow-xl hover:shadow-2xl hover:bg-gray-200"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
