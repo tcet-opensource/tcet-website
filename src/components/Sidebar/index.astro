@@ -30,7 +30,7 @@ let { links } = Astro.props;
             class="object-contain object-center transition-transform duration-500"
         />
     </div>
-    <div class="flex flex-col gap-2 h-[100%] overflow-y-scroll overflow-x-hidden " >
+    <div class="flex flex-col gap-2 h-[100%] max-h-[45rem] overflow-y-auto overflow-x-hidden " >
         {
             links.map((links) => (
                 <a
