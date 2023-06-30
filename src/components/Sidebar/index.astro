@@ -5,19 +5,20 @@ export interface Props {
 }
 
 let { links } = Astro.props;
-links = links.map((links) => {
-    const { link } = links;
-    if (link[link.length - 1] !== "/") {
-        links.link = link + "/";
-    }
+// links = links.map((links) => {
+//     const { link } = links;
+//     if (link[link.length - 1] !== "/") {
+//         links.link = link + "/";
+//     }
 
-    return links;
-});
+//     return links;
+// });
+
 ---
 
 <aside
     id="sidebar"
-    class="fixed md:sticky z-10 h-[80%] bg-white w-3/5 max-w-sm p-4 md:p-6 md:m-6 -left-[57%] md:left-0 md:top-6 border border-gray-200 rounded-md shadow-[#1018280F] shadow-lg sm:shadow-md duration-500"
+    class="fixed md:sticky z-10  h-max bg-white col-span-3  p-4 md:p-6 md:m-4 -left-[57%] md:left-0 md:top-6 border border-gray-200 rounded-md shadow-[#1018280F] shadow-lg sm:shadow-md duration-500"
 >
     <div
         id="sidebar-toggle"
@@ -29,15 +30,15 @@ links = links.map((links) => {
             class="object-contain object-center transition-transform duration-500"
         />
     </div>
-    <div class="flex flex-col gap-2 h-[100%] overflow-y-scroll overflow-x-hidden" >
+    <div class="flex flex-col gap-2 h-[100%] overflow-y-scroll overflow-x-hidden " >
         {
             links.map((links) => (
                 <a
                     href={links.link}
-                    class={`text-gray-600 text-base rounded-lg font-sans ${
-                        Astro.url.pathname === links.link
-                            ? "bg-gray-100 font-semibold text-gray-900"
-                            : ""
+                    class={` text-base font-medium rounded-lg font-sans ${
+                        (Astro.url.pathname === links.link) || (Astro.url.pathname+"/" === links.link)
+                            ? "bg-gray-100  text-blue-gray-900"
+                            : "text-blue-gray-600"
                     }`}
                 >
                     <div class="py-1 px-2 rounded-md hover:bg-gray-100">

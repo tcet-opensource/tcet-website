@@ -59,9 +59,11 @@ import type { link } from "../env";
   </head>
   <body>
     <Header />
-    <div class={`${sidebar ? "flex" : ""}`}>
+    <div class={`${sidebar ? "md:grid grid-cols-10 md:mx-8" : ""}`}>
       { sidebar && <Sidebar links={sidebar} /> }
-      <slot />
+      <div class="col-span-7" >
+        <slot />
+      </div>
     </div>
     <Footer />
   </body>

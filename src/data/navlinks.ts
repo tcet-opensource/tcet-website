@@ -24,21 +24,22 @@ export const secondaryLinks: link[] = [
     title: "About us",
     link: "/about",
     subLinks: [
-      { title: "About TCET", link: "/about" },
-      { title: "Recognition & Awards", link: "/about/recognition-awards" },
-      { title: "Chariman's Message", link: "/about/charimans-message" },
-      { title: "CEO's Message", link: "/about/CEOs-message" },
-      { title: "Principle's Message", link: "/about/principle-message" },
-      { title: "Dean SSW Message", link: "/about/dean-SSW-message" },
-      { title: "Dean RnD Message", link: "/about/dean-RnD-message" },
-      { title: "Dean ACD Message", link: "/about/dean-ACD-message" },
-      { title: "Institutional Growth", link: "/about/institutional-growth" },
-      { title: "Testimonials", link: "/about/testimonials" },
+      { title: "About TCET", link: "/about/" },
+      { title: "Recognition & Awards", link: "/about/recognition-awards/" },
+      { title: "Chariman's Message", link: "/about/chairmans-message/" },
+      { title: "CEO's Message", link: "/about/CEOs-message/" },
+      { title: "Principle's Message", link: "/about/principal-message/" },
+      { title: "Vice Principle's Message", link: "/about/vice-principal-message/" },
+      { title: "Dean SSW Message", link: "/about/dean-SSW-message/" },
+      { title: "Dean RnD Message", link: "/about/dean-RnD-message/" },
+      { title: "Dean ACD Message", link: "/about/dean-ACD-message/" },
+      { title: "Institutional Growth", link: "/about/institutional-growth/" },
+      { title: "Testimonials", link: "/about/testimonials/" },
       {
         title: "Educational Survey",
         link: "/about/documentation#educational-survey",
       },
-      { title: "Documentation", link: "/about/documentation" },
+      { title: "Documentation", link: "/about/documentation/" },
       {
         title: "Institutional Activities",
         link: "/about/documentation#institutional-activities",
@@ -46,11 +47,11 @@ export const secondaryLinks: link[] = [
       { title: "NIRF Data", link: "/about/documentation#NIRF-data" },
       {
         title: "Mandatory Disclosure",
-        link: "/about/documentation/mandotory-disclosure.pdf",
+        link: "https://tcetmumbai.in/NEW%20FORMAT%20-%20Mandatory-Disclosure-for-2022-23-UPDATED-17.01.23%20(3).pdf",
       },
       {
         title: "Perspective Plan",
-        link: "/about/documentation/perspective-plan.pdf",
+        link: "https://tcetmumbai.in/documents/Perspective%20Plans.pdf",
       },
     ],
     leftPanel: [
@@ -58,51 +59,51 @@ export const secondaryLinks: link[] = [
         title: "About us",
         subTitle: "We are always looking for talented people, Join us!",
         logo: "/Header/Icon 1.svg",
-        link: "/about-us",
+        link: "/about",
       },
       {
         title: "Educational Survey",
         subTitle: "We are always looking for talented people, Join us!",
         logo: "/Header/Icon 2.svg",
-        link: "/educational-survey",
+        link: "/about/documentation#educational-survey",
       },
       {
         title: "Testimonial",
         subTitle: "We are always looking for talented people, Join us!",
         logo: "/Header/Icon 3.svg",
-        link: "/testimonial",
+        link: "/about/testimonials",
       },
       {
         title: "Institutional Activities",
         subTitle: "We are always looking for talented people, Join us!",
         logo: "/Header/Icon 1.svg",
-        link: "/institutional-activities",
+        link: "/about/documentation#institutional-activities",
       },
       {
         title: "Institutional Growth",
         subTitle: "We are always looking for talented people, Join us!",
         logo: "/Header/Icon 2.svg",
-        link: "/institutional-growth",
+        link: "/about/institutional-growth",
       },
       {
         title: "Documents",
         subTitle: "We are always looking for talented people, Join us!",
         logo: "/Header/Icon 3.svg",
-        link: "/docs",
+        link: "/about/documentation",
       },
     ],
     rightPanel: {
       heading: "Messages",
       links: [
-        { title: "Chairman's Message", link: "/chairman" },
-        { title: "CEO's Message", link: "/ceo" },
-        { title: "Principal's Message", link: "/principal" },
-        { title: "Vice-Principal's Message", link: "/vice-principal" },
-        { title: "Dean's (Academic) Message", link: "/dean" },
-        { title: "Dean's (R & D) Message", link: "/dean" },
+        { title: "Chairman's Message", link: "/about/chairmans-message" },
+        { title: "CEO's Message", link: "/about/CEOs-message" },
+        { title: "Principal's Message", link: "/about/principal-message" },
+        { title: "Vice-Principal's Message", link: "/about/vice-principal-message" },
+        { title: "Dean's (Academic) Message", link: "/about/dean-ACD-message" },
+        { title: "Dean's (R & D) Message", link: "/about/dean-RnD-message" },
         {
           title: "Dean's (Student & Staff Welfare) Message",
-          link: "/dean",
+          link: "/about/dean-SSW-message",
         },
       ],
     },
@@ -137,7 +138,16 @@ export const secondaryLinks: link[] = [
   },
   {
     title: "Life @TCET",
-    link: "https://www.tcetmumbai.in/aboutLifeTCET.html",
+    link: "/life-at-tcet",
+    subLinks: [
+      {
+        title: "Life @TCET",
+        link:"/life-at-tcet/"        
+      }, {
+        title: "Achievements",
+        link: "/life-at-tcet/achievements/"
+      }
+    ]
   },
   {
     title: "Events",
