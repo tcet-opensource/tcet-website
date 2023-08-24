@@ -1,0 +1,17 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import IndustrialGrowth from "../../components/About/IndustrialGrowth/index.astro";
+import { getSubLinksFirstLevel } from "../../data/navlinks"
+
+const subLinks = getSubLinksFirstLevel("About us") || []
+---
+
+<Layout
+    sidebar={subLinks} 
+    title="Welcome to TCET Mumbai"
+    description="Thakur College of Engineering and Technology"
+>
+    <main>
+        <IndustrialGrowth />
+    </main>
+</Layout>
