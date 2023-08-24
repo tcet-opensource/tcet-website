@@ -12,7 +12,7 @@
     import type { chartData } from "../../../env";
     import { getChartData } from '../../../data/industrialgrowth';
 
-    const data: chartData = getChartData(4);
+    const data: chartData | undefined = getChartData(4);
     const ctx4 = document.getElementById("chart4");
 
     const options = {
@@ -36,7 +36,7 @@
                 grid: { display: false, },
                 title: {
                     display: true,
-                    text: data.title,
+                    text: data?.title,
                 },
                 min: 0,
                 max: 1500,

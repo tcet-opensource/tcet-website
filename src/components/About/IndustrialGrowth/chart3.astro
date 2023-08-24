@@ -11,7 +11,7 @@
     import type { chartData } from "../../../env";
     import { getChartData } from "../../../data/industrialgrowth";
 
-    const data: chartData = getChartData(3);
+    const data: chartData | undefined = getChartData(3);
     const ctx3 = document.getElementById('chart3');
 
     const options = {
@@ -35,7 +35,7 @@
                 grid: { display: false, },
                 title: {
                     display: true,
-                    text: data.title,
+                    text: data?.title,
                 },
                 ticks: {
                     stepSize: 100,

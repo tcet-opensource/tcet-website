@@ -12,7 +12,7 @@
     import type { chartData } from "../../../env";
     import { getChartData } from '../../../data/industrialgrowth';
 
-    const data: chartData = getChartData(5);
+    const data: chartData | undefined = getChartData(5);
     const ctx5 = document.getElementById("chart5");
 
     const options = {
@@ -45,7 +45,7 @@
                 grid: { display: false, },
                 title: {
                     display: true,
-                    text: 'No of Computers'
+                    text: data?.title
                 },
                 min: 0,
                 max: 1500,
