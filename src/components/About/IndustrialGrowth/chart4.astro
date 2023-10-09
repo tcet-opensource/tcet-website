@@ -1,0 +1,55 @@
+---
+
+---
+
+<div class="h-80 sm:h-96">
+    <h2 class="text-center text-xl sm:text-2xl font-bold">Library Holding</h2>
+    <canvas id="chart4"></canvas>
+</div>
+
+<script>
+    import Chart from 'chart.js/auto';
+    import type { chartData } from "../../../env";
+    import { getChartData } from '../../../data/industrialgrowth';
+
+    const data: chartData | undefined = getChartData(4);
+    const ctx4 = document.getElementById("chart4");
+
+    const options = {
+        plugins: {
+            legend: {
+                display: true,
+                position: 'bottom',
+                labels: {
+                    font: { size: 14 },
+                    padding: 20,
+                },
+            },
+        },      
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            x: {
+                grid: { display: false, },
+            },
+            y: {
+                grid: { display: false, },
+                title: {
+                    display: true,
+                    text: data?.title,
+                },
+                min: 0,
+                max: 1500,
+                ticks: {
+                    stepSize: 250,
+                },
+            }
+        }
+    }
+
+    const chart = new Chart(ctx4, {
+        type: 'bar',
+        data: data?.data,
+        options: options,
+    });
+</script>

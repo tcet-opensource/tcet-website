@@ -74,3 +74,19 @@ export type IndustryInteractionType = {
   eventImages: imageLink[];
 }
 
+export type chartData = {
+  chartNo: number;
+  title: string;
+  data: {
+    labels: string[];
+    datasets: {
+      data: number[];
+      label: string;
+      backgroundColor?: string;
+      borderColor?: string;
+      borderRadius?: number;
+      type?: string;
+      order?: number;
+    }[];
+  }
+}
