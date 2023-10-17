@@ -2,6 +2,7 @@
 **Info:**
 **The TCET official page is built using AstroJS, an all-in-one web framework designed for speed.**
 
+
 ### Steps to run the site on your local system: 
 These are the steps you need to follow to get this site on your local system.
 
