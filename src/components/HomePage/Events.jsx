@@ -45,7 +45,7 @@ R&D activities
                 disableOnInteraction: false,
             }}
             navigation={{
-                prevEl: ".swiper-prev",
+                // prevEl: ".swiper-prev",
                 nextEl: ".swiper-next",
                 disabledClass: "swiper-button-disabled",
             }}
@@ -67,7 +67,7 @@ R&D activities
                     </SwiperSlide>
                 ))
             }
-            <div className="swiper-next flex items-center justify-center shadow-md shadow-[0px 4px 8px -2px rgba(16, 24, 40, 0.1), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);] absolute z-10 top-1/2 right-2 transform -translate-y-1/2 bg-white w-8 h-8 rounded-full">
+            <div className="swiper-next flex items-center justify-center shadow-md shadow-[0px 4px 8px -2px rgba(16, 24, 40, 0.1), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);] absolute z-10 top-1/2 right-2 transform -translate-y-1/2 bg-white w-8 h-8 rounded-full cursor-pointer">
                 <img src="/misc/chevron-right.svg" alt="next-image-btn" />
             </div>
         </Swiper>
