@@ -60,7 +60,7 @@ const App = () => {
     <> 
       <div className="relative">
 
-      <div className="absolute bottom-7 left-4 w-full sm:w-[400px] lg:w-[700px] z-10">
+      <div className="absolute bottom-7 left-4 sm:w-[400px] lg:w-[700px] z-10">
         <h1 className="lg:text-6xl text-2xl sm:text-3xl w-3/5 sm:w-3/4 lg:w-full text-white font-title">
         Academic + Fun + Wellness = Life@TCET
         </h1>
