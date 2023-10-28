@@ -30,7 +30,8 @@ const LeftPanel = ({
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                   strokeWidth={2}
-                  className="h-5 w-5 rotate-[270deg]"
+                  className={`h-5 w-5 rotate-[270deg] ${
+                    programme === currentProgramme ? "rotate-[0deg] transition duration-300 ease-in-out" : ""}`}
                 >
                   <path
                     strokeLinecap="round"
