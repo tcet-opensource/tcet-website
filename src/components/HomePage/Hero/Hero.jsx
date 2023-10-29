@@ -81,7 +81,6 @@ const App = () => {
                 fill="#101828"
               />
             </svg>
-
             Play the Tour
           </button>
         </div>

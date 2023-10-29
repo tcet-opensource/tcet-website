@@ -88,9 +88,9 @@ const MagazineSection = () => {
           },
         }}
         navigation={{
-          prevEl: ".swiper-prev",
-          nextEl: ".swiper-next",
-          disabledClass: "swiper-button-disabled",
+          prevEl: '.swiper-prev',
+          nextEl: '.swiper-next',
+          disabledClass: 'swiper-button-disabled',
         }}
         // onSwiper={(swiper) => console.log(swiper)}
         // onSlideChange={() => console.log("slide change")}

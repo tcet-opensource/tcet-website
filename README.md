@@ -1,7 +1,7 @@
 # TCET Website
-:::info 
-The TCET Training and Placment page is built using AstroJS, an all-in-one web framework designed for speed.
-:::
+**Info:**
+**The TCET official page is built using AstroJS, an all-in-one web framework designed for speed.**
+
 
 ### Steps to run the site on your local system: 
 These are the steps you need to follow to get this site on your local system.
@@ -15,6 +15,8 @@ Follow these steps to install git in your computer.
 ### Clone the repo
 Open Git Bash in any folder and paste the following command
 
+> If you are making an external contribution its a good practice to first Fork & then clone the forked repo
+
 ```bash
 git clone https://github.com/tcet-opensource/tcet-website
 ```
@@ -25,9 +27,8 @@ git clone https://github.com/tcet-opensource/tcet-website
 2. Select <b>Current</b>.
 3. Download the 64-bit .msi version. Follow the steps and install NodeJS.
 
-:::note
-It is important to have NodeJS in your system
-:::
+**Note:**
+**It is important to have NodeJS in your system**
 
 ### Open the folder in VS Code
 1. Install [VS Code](https://code.visualstudio.com/docs/?dv=win32user) if not installed. 
@@ -71,3 +72,6 @@ yarn
 ```bash
 yarn dev
 ```
+
++ [x] make sure you PR on the Staging Branch
+
